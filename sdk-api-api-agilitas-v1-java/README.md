@@ -63,25 +63,24 @@ Example of an utility method to encrypt AES key with de public key
  	public static void encryptAESKey(String keyId, String key, String publicKey) throws Exception {
 
 		sun.misc.BASE64Decoder decoder = new sun.misc.BASE64Decoder();
-		byte[] sigBytes = decoder.decodeBuffer(publicKey);
-		java.security.spec.X509EncodedKeySpec x509KeySpec = new java.security.spec.X509EncodedKeySpec(sigBytes);
-		java.security.KeyFactory keyFact = java.security.KeyFactory.getInstance(Algorithms.RSA);
+		byte[] sigBytes2 = decoder.decodeBuffer(publicKey);
+		java.security.spec.X509EncodedKeySpec x509KeySpec = new java.security.spec.X509EncodedKeySpec(sigBytes2);
+		java.security.KeyFactory keyFact = java.security.KeyFactory.getInstance("RSA");
 		java.security.PublicKey pubKey = keyFact.generatePublic(x509KeySpec);
 
-		Key aesKey = new SecretKeySpec(key.getBytes(), "AES");
+		java.security.Key aesKey = new javax.crypto.spec.SecretKeySpec(key.getBytes(), "AES");
 
 		javax.crypto.Cipher cipher = javax.crypto.Cipher.getInstance("RSA");
-		cipher.init(Cipher.ENCRYPT_MODE, pubKey);
+		cipher.init(javax.crypto.Cipher.ENCRYPT_MODE, pubKey);
 		byte[] encrypted = cipher.doFinal(aesKey.getEncoded());
 		key = org.apache.commons.codec.binary.Base64.encodeBase64String(encrypted);
 		
+		System.out.println(key);
+
 		/*
-		(POST - https://api-visa.sensedia.com/security/v1/keys)
-		 {
-		 "id": keyId,
-		 "key": key
-		 }
-		*/
+		 * (POST - https://api-visa.sensedia.com/security/v1/keys) { "id":
+		 * keyId, "key": key }
+		 */
 	}
 	
 ```
@@ -92,22 +91,26 @@ Example of an utility code to encrypt the requests
 
 	try {
 
-		byte[] cipherText = null;
-		final javax.crypto.Cipher cipher = Cipher.getInstance(Algorithms.AES);
+	        byte[] cipherText = null;
+	        final javax.crypto.Cipher cipher = javax.crypto.Cipher.getInstance("AES");
 
-		java.security.Key aesKey = new javax.crypto.spec.SecretKeySpec(key.getBytes(), Algorithms.AES);
-		cipher.init(Cipher.ENCRYPT_MODE, aesKey);
+	        java.security.Key aesKey = new javax.crypto.spec.SecretKeySpec("AES_KEY".getBytes(), "AES");
+	        cipher.init(javax.crypto.Cipher.ENCRYPT_MODE, aesKey);
 
-		String clientId = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("CLIENT_ID".getBytes()));
+	        String clientId = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("CLIENT_ID".getBytes()));
 
-		// ACCESS_TOKEN format = accessToken_yyyy-MM-dd HH:mm:ss.SSS			
-		String accessToken = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("ACCESS_TOKEN".getBytes()));
+	        // ACCESS_TOKEN format = accessToken_yyyy-MM-dd HH:mm:ss.SSS            
+	        String accessToken = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("ACCESS_TOKEN".getBytes()));
 
-		String body = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("BODY".getBytes()));
+	        String body = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("BODY".getBytes()));
+	        
+	        System.out.println(clientId);
+	        System.out.println(accessToken);
+	        System.out.println(body);
 
-	} catch (java.lang.Exception e) {
-		new java.lang.RuntimeException(e);
-	}
+	    } catch (java.lang.Exception e) {
+	        new java.lang.RuntimeException(e);
+	    }
 	
 ```
 
@@ -127,11 +130,11 @@ public class CartoesApiExample {
 
 	public static void main(String[] args) {		 
 			try {
-				byte[] cipherText = null;
-				final javax.crypto.Cipher cipher = Cipher.getInstance(Algorithms.AES);
+				 byte[] cipherText = null;
+				final javax.crypto.Cipher cipher = javax.crypto.Cipher.getInstance("AES");
 
-				java.security.Key aesKey = new javax.crypto.spec.SecretKeySpec("AES_KEY", Algorithms.AES);
-				cipher.init(Cipher.ENCRYPT_MODE, aesKey);
+				java.security.Key aesKey = new javax.crypto.spec.SecretKeySpec("AES_KEY".getBytes(), "AES");
+				cipher.init(javax.crypto.Cipher.ENCRYPT_MODE, aesKey);
 
 				String clientId = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("CLIENT_ID".getBytes()));
 				String accessToken = org.apache.commons.codec.binary.Base64.encodeBase64String(cipher.doFinal("ACCESS_TOKEN".getBytes()));
