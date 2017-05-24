@@ -85,16 +85,16 @@ public class JsonUtil {
       return new TypeToken<List<InlineResponse2001>>(){}.getType();
     }
     
-    if ("InlineResponse2001Coordinates".equalsIgnoreCase(className)) {
-      return new TypeToken<List<InlineResponse2001Coordinates>>(){}.getType();
-    }
-    
     if ("InlineResponse2001Gates".equalsIgnoreCase(className)) {
       return new TypeToken<List<InlineResponse2001Gates>>(){}.getType();
     }
     
     if ("InlineResponse2001Map".equalsIgnoreCase(className)) {
       return new TypeToken<List<InlineResponse2001Map>>(){}.getType();
+    }
+    
+    if ("InlineResponse2001MapCoordinates".equalsIgnoreCase(className)) {
+      return new TypeToken<List<InlineResponse2001MapCoordinates>>(){}.getType();
     }
     
     if ("InlineResponse2001Sectors".equalsIgnoreCase(className)) {
@@ -175,16 +175,16 @@ public class JsonUtil {
       return new TypeToken<InlineResponse2001>(){}.getType();
     }
     
-    if ("InlineResponse2001Coordinates".equalsIgnoreCase(className)) {
-      return new TypeToken<InlineResponse2001Coordinates>(){}.getType();
-    }
-    
     if ("InlineResponse2001Gates".equalsIgnoreCase(className)) {
       return new TypeToken<InlineResponse2001Gates>(){}.getType();
     }
     
     if ("InlineResponse2001Map".equalsIgnoreCase(className)) {
       return new TypeToken<InlineResponse2001Map>(){}.getType();
+    }
+    
+    if ("InlineResponse2001MapCoordinates".equalsIgnoreCase(className)) {
+      return new TypeToken<InlineResponse2001MapCoordinates>(){}.getType();
     }
     
     if ("InlineResponse2001Sectors".equalsIgnoreCase(className)) {

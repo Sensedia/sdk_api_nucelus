@@ -168,7 +168,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **events_event_id_sectors_sector_id_subsectors_get**
-> list[InlineResponse2002] events_event_id_sectors_sector_id_subsectors_get(client_id, access_token, event_id, sector_id)
+> InlineResponse2002 events_event_id_sectors_sector_id_subsectors_get(client_id, access_token, event_id, sector_id)
 
 
 
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[InlineResponse2002]**](InlineResponse2002.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

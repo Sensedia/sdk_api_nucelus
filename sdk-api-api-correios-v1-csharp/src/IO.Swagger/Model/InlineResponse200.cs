@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -32,34 +32,34 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse200" /> class.
         /// </summary>
-        /// <param name="County">County&#39;s name.</param>
-        /// <param name="Start">Zipcode range start.</param>
-        /// <param name="End">Zipcode range end.</param>
-        public InlineResponse200(string County = default(string), string Start = default(string), string End = default(string))
+        /// <param name="Nome">Nome do municipio.</param>
+        /// <param name="Inicio">inicio da faixa de CEP.</param>
+        /// <param name="Fim">Fim da faixa de CEP.</param>
+        public InlineResponse200(string Nome = default(string), string Inicio = default(string), string Fim = default(string))
         {
-            this.County = County;
-            this.Start = Start;
-            this.End = End;
+            this.Nome = Nome;
+            this.Inicio = Inicio;
+            this.Fim = Fim;
         }
         
         /// <summary>
-        /// County&#39;s name
+        /// Nome do municipio
         /// </summary>
-        /// <value>County&#39;s name</value>
-        [DataMember(Name="county", EmitDefaultValue=false)]
-        public string County { get; set; }
+        /// <value>Nome do municipio</value>
+        [DataMember(Name="nome", EmitDefaultValue=false)]
+        public string Nome { get; set; }
         /// <summary>
-        /// Zipcode range start
+        /// inicio da faixa de CEP
         /// </summary>
-        /// <value>Zipcode range start</value>
-        [DataMember(Name="start", EmitDefaultValue=false)]
-        public string Start { get; set; }
+        /// <value>inicio da faixa de CEP</value>
+        [DataMember(Name="inicio", EmitDefaultValue=false)]
+        public string Inicio { get; set; }
         /// <summary>
-        /// Zipcode range end
+        /// Fim da faixa de CEP
         /// </summary>
-        /// <value>Zipcode range end</value>
-        [DataMember(Name="end", EmitDefaultValue=false)]
-        public string End { get; set; }
+        /// <value>Fim da faixa de CEP</value>
+        [DataMember(Name="fim", EmitDefaultValue=false)]
+        public string Fim { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,9 +68,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse200 {\n");
-            sb.Append("  County: ").Append(County).Append("\n");
-            sb.Append("  Start: ").Append(Start).Append("\n");
-            sb.Append("  End: ").Append(End).Append("\n");
+            sb.Append("  Nome: ").Append(Nome).Append("\n");
+            sb.Append("  Inicio: ").Append(Inicio).Append("\n");
+            sb.Append("  Fim: ").Append(Fim).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,19 +108,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.County == other.County ||
-                    this.County != null &&
-                    this.County.Equals(other.County)
+                    this.Nome == other.Nome ||
+                    this.Nome != null &&
+                    this.Nome.Equals(other.Nome)
                 ) && 
                 (
-                    this.Start == other.Start ||
-                    this.Start != null &&
-                    this.Start.Equals(other.Start)
+                    this.Inicio == other.Inicio ||
+                    this.Inicio != null &&
+                    this.Inicio.Equals(other.Inicio)
                 ) && 
                 (
-                    this.End == other.End ||
-                    this.End != null &&
-                    this.End.Equals(other.End)
+                    this.Fim == other.Fim ||
+                    this.Fim != null &&
+                    this.Fim.Equals(other.Fim)
                 );
         }
 
@@ -135,12 +135,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.County != null)
-                    hash = hash * 59 + this.County.GetHashCode();
-                if (this.Start != null)
-                    hash = hash * 59 + this.Start.GetHashCode();
-                if (this.End != null)
-                    hash = hash * 59 + this.End.GetHashCode();
+                if (this.Nome != null)
+                    hash = hash * 59 + this.Nome.GetHashCode();
+                if (this.Inicio != null)
+                    hash = hash * 59 + this.Inicio.GetHashCode();
+                if (this.Fim != null)
+                    hash = hash * 59 + this.Fim.GetHashCode();
                 return hash;
             }
         }

@@ -163,7 +163,7 @@ No authorization required
 
 <a name="eventsEventIdSectorsSectorIdSubsectorsGet"></a>
 # **eventsEventIdSectorsSectorIdSubsectorsGet**
-> List&lt;InlineResponse2002&gt; eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId)
+> InlineResponse2002 eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId)
 
 
 
@@ -182,7 +182,7 @@ String accessToken = "accessToken_example"; // String | Access token used in the
 String eventId = "eventId_example"; // String | Event to search.
 String sectorId = "sectorId_example"; // String | Sector to search.
 try {
-    List<InlineResponse2002> result = apiInstance.eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
+    InlineResponse2002 result = apiInstance.eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling EventsApi#eventsEventIdSectorsSectorIdSubsectorsGet");
@@ -201,7 +201,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List&lt;InlineResponse2002&gt;**](InlineResponse2002.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

@@ -1,7 +1,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -14,31 +14,31 @@ require 'date'
 module SwaggerClient
   # Customer Model
   class InlineResponse200
-    # County's name
-    attr_accessor :county
+    # Nome do municipio
+    attr_accessor :nome
 
-    # Zipcode range start
-    attr_accessor :start
+    # inicio da faixa de CEP
+    attr_accessor :inicio
 
-    # Zipcode range end
-    attr_accessor :_end
+    # Fim da faixa de CEP
+    attr_accessor :fim
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'county' => :'county',
-        :'start' => :'start',
-        :'_end' => :'end'
+        :'nome' => :'nome',
+        :'inicio' => :'inicio',
+        :'fim' => :'fim'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'county' => :'String',
-        :'start' => :'String',
-        :'_end' => :'String'
+        :'nome' => :'String',
+        :'inicio' => :'String',
+        :'fim' => :'String'
       }
     end
 
@@ -50,16 +50,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'county')
-        self.county = attributes[:'county']
+      if attributes.has_key?(:'nome')
+        self.nome = attributes[:'nome']
       end
 
-      if attributes.has_key?(:'start')
-        self.start = attributes[:'start']
+      if attributes.has_key?(:'inicio')
+        self.inicio = attributes[:'inicio']
       end
 
-      if attributes.has_key?(:'end')
-        self._end = attributes[:'end']
+      if attributes.has_key?(:'fim')
+        self.fim = attributes[:'fim']
       end
 
     end
@@ -82,9 +82,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          county == o.county &&
-          start == o.start &&
-          _end == o._end
+          nome == o.nome &&
+          inicio == o.inicio &&
+          fim == o.fim
     end
 
     # @see the `==` method
@@ -96,7 +96,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [county, start, _end].hash
+      [nome, inicio, fim].hash
     end
 
     # Builds the object from hash

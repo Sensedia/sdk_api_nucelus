@@ -24,7 +24,7 @@ public class Sectors {
   @SerializedName("gates")
   private List<InlineResponse2001Gates> gates = null;
   @SerializedName("map")
-  private List<InlineResponse2001Map> map = null;
+  private InlineResponse2001Map map = null;
 
   /**
    **/
@@ -39,10 +39,10 @@ public class Sectors {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<InlineResponse2001Map> getMap() {
+  public InlineResponse2001Map getMap() {
     return map;
   }
-  public void setMap(List<InlineResponse2001Map> map) {
+  public void setMap(InlineResponse2001Map map) {
     this.map = map;
   }
 

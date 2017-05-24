@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -83,33 +83,33 @@ class InlineResponse2001Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "street"
+     * Test attribute "logradouro"
      */
-    public function testPropertyStreet()
+    public function testPropertyLogradouro()
     {
 
     }
 
     /**
-     * Test attribute "neighborhood"
+     * Test attribute "bairro"
      */
-    public function testPropertyNeighborhood()
+    public function testPropertyBairro()
     {
 
     }
 
     /**
-     * Test attribute "county"
+     * Test attribute "municipio"
      */
-    public function testPropertyCounty()
+    public function testPropertyMunicipio()
     {
 
     }
 
     /**
-     * Test attribute "state"
+     * Test attribute "uf"
      */
-    public function testPropertyState()
+    public function testPropertyUf()
     {
 
     }

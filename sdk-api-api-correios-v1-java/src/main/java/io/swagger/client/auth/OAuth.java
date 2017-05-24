@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -18,7 +18,7 @@ import io.swagger.client.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class OAuth implements Authentication {
   private String accessToken;
 

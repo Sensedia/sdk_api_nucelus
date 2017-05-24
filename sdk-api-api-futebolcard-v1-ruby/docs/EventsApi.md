@@ -172,7 +172,7 @@ No authorization required
 
 
 # **events_event_id_sectors_sector_id_subsectors_get**
-> Array&lt;InlineResponse2002&gt; events_event_id_sectors_sector_id_subsectors_get(client_id, access_token, event_id, sector_id)
+> InlineResponse2002 events_event_id_sectors_sector_id_subsectors_get(client_id, access_token, event_id, sector_id)
 
 
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Array&lt;InlineResponse2002&gt;**](InlineResponse2002.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

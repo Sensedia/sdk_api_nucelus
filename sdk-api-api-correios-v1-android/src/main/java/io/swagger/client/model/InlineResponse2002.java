@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -12,53 +12,41 @@
 
 package io.swagger.client.model;
 
+import io.swagger.client.model.ObjetosEventos;
+import java.util.*;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
 
 /**
- * Customer Model
+ * Postal Object model
  **/
-@ApiModel(description = "Customer Model")
+@ApiModel(description = "Postal Object model")
 public class InlineResponse2002 {
   
-  @SerializedName("eventType")
-  private String eventType = null;
-  @SerializedName("eventStatus")
-  private Integer eventStatus = null;
-  @SerializedName("eventDescription")
-  private String eventDescription = null;
+  @SerializedName("numero")
+  private String numero = null;
+  @SerializedName("eventos")
+  private List<ObjetosEventos> eventos = null;
 
   /**
    * 
    **/
   @ApiModelProperty(value = "")
-  public String getEventType() {
-    return eventType;
+  public String getNumero() {
+    return numero;
   }
-  public void setEventType(String eventType) {
-    this.eventType = eventType;
-  }
-
-  /**
-   * 
-   **/
-  @ApiModelProperty(value = "")
-  public Integer getEventStatus() {
-    return eventStatus;
-  }
-  public void setEventStatus(Integer eventStatus) {
-    this.eventStatus = eventStatus;
+  public void setNumero(String numero) {
+    this.numero = numero;
   }
 
   /**
-   * 
    **/
   @ApiModelProperty(value = "")
-  public String getEventDescription() {
-    return eventDescription;
+  public List<ObjetosEventos> getEventos() {
+    return eventos;
   }
-  public void setEventDescription(String eventDescription) {
-    this.eventDescription = eventDescription;
+  public void setEventos(List<ObjetosEventos> eventos) {
+    this.eventos = eventos;
   }
 
 
@@ -71,17 +59,15 @@ public class InlineResponse2002 {
       return false;
     }
     InlineResponse2002 inlineResponse2002 = (InlineResponse2002) o;
-    return (this.eventType == null ? inlineResponse2002.eventType == null : this.eventType.equals(inlineResponse2002.eventType)) &&
-        (this.eventStatus == null ? inlineResponse2002.eventStatus == null : this.eventStatus.equals(inlineResponse2002.eventStatus)) &&
-        (this.eventDescription == null ? inlineResponse2002.eventDescription == null : this.eventDescription.equals(inlineResponse2002.eventDescription));
+    return (this.numero == null ? inlineResponse2002.numero == null : this.numero.equals(inlineResponse2002.numero)) &&
+        (this.eventos == null ? inlineResponse2002.eventos == null : this.eventos.equals(inlineResponse2002.eventos));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.eventType == null ? 0: this.eventType.hashCode());
-    result = 31 * result + (this.eventStatus == null ? 0: this.eventStatus.hashCode());
-    result = 31 * result + (this.eventDescription == null ? 0: this.eventDescription.hashCode());
+    result = 31 * result + (this.numero == null ? 0: this.numero.hashCode());
+    result = 31 * result + (this.eventos == null ? 0: this.eventos.hashCode());
     return result;
   }
 
@@ -90,9 +76,8 @@ public class InlineResponse2002 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2002 {\n");
     
-    sb.append("  eventType: ").append(eventType).append("\n");
-    sb.append("  eventStatus: ").append(eventStatus).append("\n");
-    sb.append("  eventDescription: ").append(eventDescription).append("\n");
+    sb.append("  numero: ").append(numero).append("\n");
+    sb.append("  eventos: ").append(eventos).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

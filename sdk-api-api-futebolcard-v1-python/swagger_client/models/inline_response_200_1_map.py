@@ -32,7 +32,7 @@ class InlineResponse2001Map(object):
         """
         self.swagger_types = {
             'url': 'str',
-            'coordinates': 'list[InlineResponse2001Coordinates]'
+            'coordinates': 'list[InlineResponse2001MapCoordinates]'
         }
 
         self.attribute_map = {
@@ -70,7 +70,7 @@ class InlineResponse2001Map(object):
         Gets the coordinates of this InlineResponse2001Map.
 
         :return: The coordinates of this InlineResponse2001Map.
-        :rtype: list[InlineResponse2001Coordinates]
+        :rtype: list[InlineResponse2001MapCoordinates]
         """
         return self._coordinates
 
@@ -80,7 +80,7 @@ class InlineResponse2001Map(object):
         Sets the coordinates of this InlineResponse2001Map.
 
         :param coordinates: The coordinates of this InlineResponse2001Map.
-        :type: list[InlineResponse2001Coordinates]
+        :type: list[InlineResponse2001MapCoordinates]
         """
 
         self._coordinates = coordinates

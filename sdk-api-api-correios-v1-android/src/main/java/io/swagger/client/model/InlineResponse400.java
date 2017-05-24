@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -18,21 +18,21 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class InlineResponse400 {
   
-  @SerializedName("result")
-  private String result = null;
+  @SerializedName("resultado")
+  private String resultado = null;
   @SerializedName("status")
   private String status = null;
-  @SerializedName("details")
-  private String details = null;
+  @SerializedName("detalhes")
+  private String detalhes = null;
 
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getResult() {
-    return result;
+  public String getResultado() {
+    return resultado;
   }
-  public void setResult(String result) {
-    this.result = result;
+  public void setResultado(String resultado) {
+    this.resultado = resultado;
   }
 
   /**
@@ -48,11 +48,11 @@ public class InlineResponse400 {
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getDetails() {
-    return details;
+  public String getDetalhes() {
+    return detalhes;
   }
-  public void setDetails(String details) {
-    this.details = details;
+  public void setDetalhes(String detalhes) {
+    this.detalhes = detalhes;
   }
 
 
@@ -65,17 +65,17 @@ public class InlineResponse400 {
       return false;
     }
     InlineResponse400 inlineResponse400 = (InlineResponse400) o;
-    return (this.result == null ? inlineResponse400.result == null : this.result.equals(inlineResponse400.result)) &&
+    return (this.resultado == null ? inlineResponse400.resultado == null : this.resultado.equals(inlineResponse400.resultado)) &&
         (this.status == null ? inlineResponse400.status == null : this.status.equals(inlineResponse400.status)) &&
-        (this.details == null ? inlineResponse400.details == null : this.details.equals(inlineResponse400.details));
+        (this.detalhes == null ? inlineResponse400.detalhes == null : this.detalhes.equals(inlineResponse400.detalhes));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.result == null ? 0: this.result.hashCode());
+    result = 31 * result + (this.resultado == null ? 0: this.resultado.hashCode());
     result = 31 * result + (this.status == null ? 0: this.status.hashCode());
-    result = 31 * result + (this.details == null ? 0: this.details.hashCode());
+    result = 31 * result + (this.detalhes == null ? 0: this.detalhes.hashCode());
     return result;
   }
 
@@ -84,9 +84,9 @@ public class InlineResponse400 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse400 {\n");
     
-    sb.append("  result: ").append(result).append("\n");
+    sb.append("  resultado: ").append(resultado).append("\n");
     sb.append("  status: ").append(status).append("\n");
-    sb.append("  details: ").append(details).append("\n");
+    sb.append("  detalhes: ").append(detalhes).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

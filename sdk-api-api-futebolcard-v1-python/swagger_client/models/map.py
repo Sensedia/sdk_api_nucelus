@@ -32,7 +32,7 @@ class Map(object):
         """
         self.swagger_types = {
             'url': 'str',
-            'coordinates': 'list[InlineResponse2001Coordinates]'
+            'coordinates': 'list[InlineResponse2001MapCoordinates]'
         }
 
         self.attribute_map = {
@@ -70,7 +70,7 @@ class Map(object):
         Gets the coordinates of this Map.
 
         :return: The coordinates of this Map.
-        :rtype: list[InlineResponse2001Coordinates]
+        :rtype: list[InlineResponse2001MapCoordinates]
         """
         return self._coordinates
 
@@ -80,7 +80,7 @@ class Map(object):
         Sets the coordinates of this Map.
 
         :param coordinates: The coordinates of this Map.
-        :type: list[InlineResponse2001Coordinates]
+        :type: list[InlineResponse2001MapCoordinates]
         """
 
         self._coordinates = coordinates

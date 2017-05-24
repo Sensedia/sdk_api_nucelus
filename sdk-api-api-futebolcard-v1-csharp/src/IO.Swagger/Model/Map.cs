@@ -34,7 +34,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Url">Url.</param>
         /// <param name="Coordinates">Coordinates.</param>
-        public Map(string Url = default(string), List<InlineResponse2001Coordinates> Coordinates = default(List<InlineResponse2001Coordinates>))
+        public Map(string Url = default(string), List<InlineResponse2001MapCoordinates> Coordinates = default(List<InlineResponse2001MapCoordinates>))
         {
             this.Url = Url;
             this.Coordinates = Coordinates;
@@ -49,7 +49,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Coordinates
         /// </summary>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
-        public List<InlineResponse2001Coordinates> Coordinates { get; set; }
+        public List<InlineResponse2001MapCoordinates> Coordinates { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>

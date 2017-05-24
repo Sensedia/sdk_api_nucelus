@@ -55,7 +55,7 @@ class Map implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'url' => 'string',
-        'coordinates' => '\Swagger\Client\Model\InlineResponse2001Coordinates[]'
+        'coordinates' => '\Swagger\Client\Model\InlineResponse2001MapCoordinates[]'
     ];
 
     public static function swaggerTypes()
@@ -175,7 +175,7 @@ class Map implements ArrayAccess
 
     /**
      * Gets coordinates
-     * @return \Swagger\Client\Model\InlineResponse2001Coordinates[]
+     * @return \Swagger\Client\Model\InlineResponse2001MapCoordinates[]
      */
     public function getCoordinates()
     {
@@ -184,7 +184,7 @@ class Map implements ArrayAccess
 
     /**
      * Sets coordinates
-     * @param \Swagger\Client\Model\InlineResponse2001Coordinates[] $coordinates
+     * @param \Swagger\Client\Model\InlineResponse2001MapCoordinates[] $coordinates
      * @return $this
      */
     public function setCoordinates($coordinates)

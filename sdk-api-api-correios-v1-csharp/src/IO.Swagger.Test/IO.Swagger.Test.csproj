@@ -2,7 +2,7 @@
 <!--
 API dos Correios
 
-Postal Object tracking API
+API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -74,7 +74,7 @@ OpenAPI spec version: 1.0
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\IO.Swagger\IO.Swagger.csproj">
-          <Project>{A46919DB-A76A-41F5-92FD-A300E3700358}</Project>
+          <Project>{A124C61B-EE80-4287-81A7-510703A25FFF}</Project>
           <Name>IO.Swagger</Name>
       </ProjectReference>
   </ItemGroup>

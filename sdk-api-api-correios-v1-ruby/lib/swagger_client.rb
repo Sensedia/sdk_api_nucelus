@@ -1,7 +1,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -16,23 +16,23 @@ require 'swagger_client/version'
 require 'swagger_client/configuration'
 
 # Models
-require 'swagger_client/models/address'
-require 'swagger_client/models/error'
-require 'swagger_client/models/events'
-require 'swagger_client/models/events_details'
+require 'swagger_client/models/detalhes_eventos'
+require 'swagger_client/models/endereco'
+require 'swagger_client/models/erro'
+require 'swagger_client/models/eventos'
+require 'swagger_client/models/faixa_cep'
 require 'swagger_client/models/inline_response_200'
 require 'swagger_client/models/inline_response_200_1'
 require 'swagger_client/models/inline_response_200_2'
 require 'swagger_client/models/inline_response_200_3'
 require 'swagger_client/models/inline_response_400'
-require 'swagger_client/models/objects_eventos'
-require 'swagger_client/models/postal_objects'
-require 'swagger_client/models/zipcode_range'
+require 'swagger_client/models/objeto_postal'
+require 'swagger_client/models/objetos_eventos'
 
 # APIs
-require 'swagger_client/api/addresses_api'
-require 'swagger_client/api/postal_objects_api'
-require 'swagger_client/api/zipcodes_api'
+require 'swagger_client/api/cep_api'
+require 'swagger_client/api/enderecoes_api'
+require 'swagger_client/api/objeto_postal_api'
 
 module SwaggerClient
   class << self

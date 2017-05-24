@@ -55,7 +55,7 @@ class SubSectors implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'subsectors' => '\Swagger\Client\Model\InlineResponse2002Subsectors[]',
-        'map' => '\Swagger\Client\Model\InlineResponse2001Map[]'
+        'map' => '\Swagger\Client\Model\InlineResponse2001Map'
     ];
 
     public static function swaggerTypes()
@@ -175,7 +175,7 @@ class SubSectors implements ArrayAccess
 
     /**
      * Gets map
-     * @return \Swagger\Client\Model\InlineResponse2001Map[]
+     * @return \Swagger\Client\Model\InlineResponse2001Map
      */
     public function getMap()
     {
@@ -184,7 +184,7 @@ class SubSectors implements ArrayAccess
 
     /**
      * Sets map
-     * @param \Swagger\Client\Model\InlineResponse2001Map[] $map
+     * @param \Swagger\Client\Model\InlineResponse2001Map $map
      * @return $this
      */
     public function setMap($map)

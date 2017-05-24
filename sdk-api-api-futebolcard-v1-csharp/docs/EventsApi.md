@@ -211,7 +211,7 @@ No authorization required
 
 <a name="eventseventidsectorssectoridsubsectorsget"></a>
 # **EventsEventIdSectorsSectorIdSubsectorsGet**
-> List<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId)
+> InlineResponse2002 EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId)
 
 
 
@@ -240,7 +240,7 @@ namespace Example
 
             try
             {
-                List&lt;InlineResponse2002&gt; result = apiInstance.EventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
+                InlineResponse2002 result = apiInstance.EventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List<InlineResponse2002>**](InlineResponse2002.md)
+[**InlineResponse2002**](InlineResponse2002.md)
 
 ### Authorization
 

@@ -14,28 +14,28 @@ require 'date'
 module SwaggerClient
 
   class SubSectorDetails
-    attr_accessor :id
+    attr_accessor :subsector_id
 
     attr_accessor :name
 
-    attr_accessor :has_ticket
+    attr_accessor :has_tickets
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id',
+        :'subsector_id' => :'subsectorId',
         :'name' => :'name',
-        :'has_ticket' => :'hasTicket'
+        :'has_tickets' => :'hasTickets'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String',
+        :'subsector_id' => :'String',
         :'name' => :'String',
-        :'has_ticket' => :'Integer'
+        :'has_tickets' => :'Integer'
       }
     end
 
@@ -47,16 +47,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'id')
-        self.id = attributes[:'id']
+      if attributes.has_key?(:'subsectorId')
+        self.subsector_id = attributes[:'subsectorId']
       end
 
       if attributes.has_key?(:'name')
         self.name = attributes[:'name']
       end
 
-      if attributes.has_key?(:'hasTicket')
-        self.has_ticket = attributes[:'hasTicket']
+      if attributes.has_key?(:'hasTickets')
+        self.has_tickets = attributes[:'hasTickets']
       end
 
     end
@@ -79,9 +79,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id &&
+          subsector_id == o.subsector_id &&
           name == o.name &&
-          has_ticket == o.has_ticket
+          has_tickets == o.has_tickets
     end
 
     # @see the `==` method
@@ -93,7 +93,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, name, has_ticket].hash
+      [subsector_id, name, has_tickets].hash
     end
 
     # Builds the object from hash

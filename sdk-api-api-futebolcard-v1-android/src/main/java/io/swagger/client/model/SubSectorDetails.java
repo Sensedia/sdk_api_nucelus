@@ -18,21 +18,21 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class SubSectorDetails {
   
-  @SerializedName("id")
-  private String id = null;
+  @SerializedName("subsectorId")
+  private String subsectorId = null;
   @SerializedName("name")
   private String name = null;
-  @SerializedName("hasTicket")
-  private Integer hasTicket = null;
+  @SerializedName("hasTickets")
+  private Integer hasTickets = null;
 
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
+  public String getSubsectorId() {
+    return subsectorId;
   }
-  public void setId(String id) {
-    this.id = id;
+  public void setSubsectorId(String subsectorId) {
+    this.subsectorId = subsectorId;
   }
 
   /**
@@ -48,11 +48,11 @@ public class SubSectorDetails {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Integer getHasTicket() {
-    return hasTicket;
+  public Integer getHasTickets() {
+    return hasTickets;
   }
-  public void setHasTicket(Integer hasTicket) {
-    this.hasTicket = hasTicket;
+  public void setHasTickets(Integer hasTickets) {
+    this.hasTickets = hasTickets;
   }
 
 
@@ -65,17 +65,17 @@ public class SubSectorDetails {
       return false;
     }
     SubSectorDetails subSectorDetails = (SubSectorDetails) o;
-    return (this.id == null ? subSectorDetails.id == null : this.id.equals(subSectorDetails.id)) &&
+    return (this.subsectorId == null ? subSectorDetails.subsectorId == null : this.subsectorId.equals(subSectorDetails.subsectorId)) &&
         (this.name == null ? subSectorDetails.name == null : this.name.equals(subSectorDetails.name)) &&
-        (this.hasTicket == null ? subSectorDetails.hasTicket == null : this.hasTicket.equals(subSectorDetails.hasTicket));
+        (this.hasTickets == null ? subSectorDetails.hasTickets == null : this.hasTickets.equals(subSectorDetails.hasTickets));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.id == null ? 0: this.id.hashCode());
+    result = 31 * result + (this.subsectorId == null ? 0: this.subsectorId.hashCode());
     result = 31 * result + (this.name == null ? 0: this.name.hashCode());
-    result = 31 * result + (this.hasTicket == null ? 0: this.hasTicket.hashCode());
+    result = 31 * result + (this.hasTickets == null ? 0: this.hasTickets.hashCode());
     return result;
   }
 
@@ -84,9 +84,9 @@ public class SubSectorDetails {
     StringBuilder sb = new StringBuilder();
     sb.append("class SubSectorDetails {\n");
     
-    sb.append("  id: ").append(id).append("\n");
+    sb.append("  subsectorId: ").append(subsectorId).append("\n");
     sb.append("  name: ").append(name).append("\n");
-    sb.append("  hasTicket: ").append(hasTicket).append("\n");
+    sb.append("  hasTickets: ").append(hasTickets).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

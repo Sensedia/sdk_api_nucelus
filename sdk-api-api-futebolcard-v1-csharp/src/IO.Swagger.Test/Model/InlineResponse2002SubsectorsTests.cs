@@ -65,12 +65,12 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test the property 'Id'
+        /// Test the property 'SubsectorId'
         /// </summary>
         [Test]
-        public void IdTest()
+        public void SubsectorIdTest()
         {
-            // TODO unit test for the property 'Id'
+            // TODO unit test for the property 'SubsectorId'
         }
         /// <summary>
         /// Test the property 'Name'
@@ -81,12 +81,12 @@ namespace IO.Swagger.Test
             // TODO unit test for the property 'Name'
         }
         /// <summary>
-        /// Test the property 'HasTicket'
+        /// Test the property 'HasTickets'
         /// </summary>
         [Test]
-        public void HasTicketTest()
+        public void HasTicketsTest()
         {
-            // TODO unit test for the property 'HasTicket'
+            // TODO unit test for the property 'HasTickets'
         }
 
     }

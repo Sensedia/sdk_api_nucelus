@@ -61,24 +61,25 @@ Please follow the [installation](#installation) instruction and execute the foll
 import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.AddressesApi;
+import io.swagger.client.api.CEPApi;
 
 import java.io.File;
 import java.util.*;
 
-public class AddressesApiExample {
+public class CEPApiExample {
 
     public static void main(String[] args) {
         
-        AddressesApi apiInstance = new AddressesApi();
-        String clientId = "clientId_example"; // String | Customer identifier used for authentication.
-        String accessToken = "accessToken_example"; // String | Access token used in the authentication.
-        String zipcode = "zipcode_example"; // String | Zipcode to search.
+        CEPApi apiInstance = new CEPApi();
+        String clientId = "clientId_example"; // String | Identificação do cliente usado na autenticação.
+        String accessToken = "accessToken_example"; // String | Access token usado na autenticação.
+        String estado = "estado_example"; // String | Abreviação do Estado.
+        String municipio = "municipio_example"; // String | Nome do Município.
         try {
-            List<InlineResponse2001> result = apiInstance.addressesZipcodeGet(clientId, accessToken, zipcode);
+            List<InlineResponse200> result = apiInstance.cepEstadoGet(clientId, accessToken, estado, municipio);
             System.out.println(result);
         } catch (ApiException e) {
-            System.err.println("Exception when calling AddressesApi#addressesZipcodeGet");
+            System.err.println("Exception when calling CEPApi#cepEstadoGet");
             e.printStackTrace();
         }
     }
@@ -92,27 +93,27 @@ All URIs are relative to *https://api-visa.sensedia.com/sandbox/visa/correios/v1
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AddressesApi* | [**addressesZipcodeGet**](docs/AddressesApi.md#addressesZipcodeGet) | **GET** /addresses/{zipcode} | 
-*PostalObjectsApi* | [**eventsEventTypeGet**](docs/PostalObjectsApi.md#eventsEventTypeGet) | **GET** /events/{eventType} | 
-*PostalObjectsApi* | [**objectsGet**](docs/PostalObjectsApi.md#objectsGet) | **GET** /objects | 
-*PostalObjectsApi* | [**objectsObjectCodeGet**](docs/PostalObjectsApi.md#objectsObjectCodeGet) | **GET** /objects/{objectCode} | 
-*ZipcodesApi* | [**zipcodesStateGet**](docs/ZipcodesApi.md#zipcodesStateGet) | **GET** /zipcodes/{state} | 
+*CEPApi* | [**cepEstadoGet**](docs/CEPApi.md#cepEstadoGet) | **GET** /cep/{estado} | 
+*EnderecoesApi* | [**enderecosCepGet**](docs/EnderecoesApi.md#enderecosCepGet) | **GET** /enderecos/{cep} | 
+*ObjetoPostalApi* | [**eventosTipoEventoGet**](docs/ObjetoPostalApi.md#eventosTipoEventoGet) | **GET** /eventos/{tipoEvento} | 
+*ObjetoPostalApi* | [**objetosCodigoObjetoGet**](docs/ObjetoPostalApi.md#objetosCodigoObjetoGet) | **GET** /objetos/{codigoObjeto} | 
+*ObjetoPostalApi* | [**objetosGet**](docs/ObjetoPostalApi.md#objetosGet) | **GET** /objetos | 
 
 
 ## Documentation for Models
 
- - [Address](docs/Address.md)
- - [Error](docs/Error.md)
- - [Events](docs/Events.md)
- - [EventsDetails](docs/EventsDetails.md)
+ - [DetalhesEventos](docs/DetalhesEventos.md)
+ - [Endereco](docs/Endereco.md)
+ - [Erro](docs/Erro.md)
+ - [Eventos](docs/Eventos.md)
+ - [FaixaCEP](docs/FaixaCEP.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [InlineResponse2002](docs/InlineResponse2002.md)
  - [InlineResponse2003](docs/InlineResponse2003.md)
  - [InlineResponse400](docs/InlineResponse400.md)
- - [ObjectsEventos](docs/ObjectsEventos.md)
- - [PostalObjects](docs/PostalObjects.md)
- - [ZipcodeRange](docs/ZipcodeRange.md)
+ - [ObjetoPostal](docs/ObjetoPostal.md)
+ - [ObjetosEventos](docs/ObjetosEventos.md)
 
 
 ## Documentation for Authorization

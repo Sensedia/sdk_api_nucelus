@@ -3,9 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**county** | **string** | County&#39;s name | [optional] 
-**start** | **string** | Zipcode range start | [optional] 
-**end** | **string** | Zipcode range end | [optional] 
+**nome** | **string** | Nome do municipio | [optional] 
+**inicio** | **string** | inicio da faixa de CEP | [optional] 
+**fim** | **string** | Fim da faixa de CEP | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

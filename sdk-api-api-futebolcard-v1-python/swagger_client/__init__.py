@@ -21,9 +21,9 @@ from .models.eventsevent_idsectorssector_idsubsectorssubsector_id_seats import E
 from .models.gates import Gates
 from .models.inline_response_200 import InlineResponse200
 from .models.inline_response_200_1 import InlineResponse2001
-from .models.inline_response_200_1_coordinates import InlineResponse2001Coordinates
 from .models.inline_response_200_1_gates import InlineResponse2001Gates
 from .models.inline_response_200_1_map import InlineResponse2001Map
+from .models.inline_response_200_1_map_coordinates import InlineResponse2001MapCoordinates
 from .models.inline_response_200_1_sectors import InlineResponse2001Sectors
 from .models.inline_response_200_2 import InlineResponse2002
 from .models.inline_response_200_2_subsectors import InlineResponse2002Subsectors

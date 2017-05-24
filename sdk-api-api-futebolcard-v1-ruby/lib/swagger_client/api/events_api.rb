@@ -207,7 +207,7 @@ module SwaggerClient
     # @param event_id Event to search.
     # @param sector_id Sector to search.
     # @param [Hash] opts the optional parameters
-    # @return [Array<InlineResponse2002>]
+    # @return [InlineResponse2002]
     def events_event_id_sectors_sector_id_subsectors_get(client_id, access_token, event_id, sector_id, opts = {})
       data, _status_code, _headers = events_event_id_sectors_sector_id_subsectors_get_with_http_info(client_id, access_token, event_id, sector_id, opts)
       return data
@@ -220,7 +220,7 @@ module SwaggerClient
     # @param event_id Event to search.
     # @param sector_id Sector to search.
     # @param [Hash] opts the optional parameters
-    # @return [Array<(Array<InlineResponse2002>, Fixnum, Hash)>] Array<InlineResponse2002> data, response status code and response headers
+    # @return [Array<(InlineResponse2002, Fixnum, Hash)>] InlineResponse2002 data, response status code and response headers
     def events_event_id_sectors_sector_id_subsectors_get_with_http_info(client_id, access_token, event_id, sector_id, opts = {})
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: EventsApi.events_event_id_sectors_sector_id_subsectors_get ..."
@@ -256,7 +256,7 @@ module SwaggerClient
         :form_params => form_params,
         :body => post_body,
         :auth_names => auth_names,
-        :return_type => 'Array<InlineResponse2002>')
+        :return_type => 'InlineResponse2002')
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: EventsApi#events_event_id_sectors_sector_id_subsectors_get\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

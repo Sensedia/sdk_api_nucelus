@@ -25,13 +25,13 @@ import java.util.List;
 /**
  * InlineResponse2002
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:08:03.639Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:46:22.524Z")
 public class InlineResponse2002 {
   @SerializedName("subsectors")
   private List<InlineResponse2002Subsectors> subsectors = new ArrayList<InlineResponse2002Subsectors>();
 
   @SerializedName("map")
-  private List<InlineResponse2001Map> map = new ArrayList<InlineResponse2001Map>();
+  private InlineResponse2001Map map = null;
 
   public InlineResponse2002 subsectors(List<InlineResponse2002Subsectors> subsectors) {
     this.subsectors = subsectors;
@@ -56,13 +56,8 @@ public class InlineResponse2002 {
     this.subsectors = subsectors;
   }
 
-  public InlineResponse2002 map(List<InlineResponse2001Map> map) {
+  public InlineResponse2002 map(InlineResponse2001Map map) {
     this.map = map;
-    return this;
-  }
-
-  public InlineResponse2002 addMapItem(InlineResponse2001Map mapItem) {
-    this.map.add(mapItem);
     return this;
   }
 
@@ -71,11 +66,11 @@ public class InlineResponse2002 {
    * @return map
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<InlineResponse2001Map> getMap() {
+  public InlineResponse2001Map getMap() {
     return map;
   }
 
-  public void setMap(List<InlineResponse2001Map> map) {
+  public void setMap(InlineResponse2001Map map) {
     this.map = map;
   }
 

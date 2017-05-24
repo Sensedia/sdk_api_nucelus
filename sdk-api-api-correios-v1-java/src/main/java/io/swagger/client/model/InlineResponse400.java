@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -21,33 +21,33 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * InlineResponse400
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class InlineResponse400 {
-  @SerializedName("result")
-  private String result = null;
+  @SerializedName("resultado")
+  private String resultado = null;
 
   @SerializedName("status")
   private String status = null;
 
-  @SerializedName("details")
-  private String details = null;
+  @SerializedName("detalhes")
+  private String detalhes = null;
 
-  public InlineResponse400 result(String result) {
-    this.result = result;
+  public InlineResponse400 resultado(String resultado) {
+    this.resultado = resultado;
     return this;
   }
 
    /**
-   * Get result
-   * @return result
+   * Get resultado
+   * @return resultado
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getResult() {
-    return result;
+  public String getResultado() {
+    return resultado;
   }
 
-  public void setResult(String result) {
-    this.result = result;
+  public void setResultado(String resultado) {
+    this.resultado = resultado;
   }
 
   public InlineResponse400 status(String status) {
@@ -68,22 +68,22 @@ public class InlineResponse400 {
     this.status = status;
   }
 
-  public InlineResponse400 details(String details) {
-    this.details = details;
+  public InlineResponse400 detalhes(String detalhes) {
+    this.detalhes = detalhes;
     return this;
   }
 
    /**
-   * Get details
-   * @return details
+   * Get detalhes
+   * @return detalhes
   **/
   @ApiModelProperty(example = "null", value = "")
-  public String getDetails() {
-    return details;
+  public String getDetalhes() {
+    return detalhes;
   }
 
-  public void setDetails(String details) {
-    this.details = details;
+  public void setDetalhes(String detalhes) {
+    this.detalhes = detalhes;
   }
 
 
@@ -96,14 +96,14 @@ public class InlineResponse400 {
       return false;
     }
     InlineResponse400 inlineResponse400 = (InlineResponse400) o;
-    return Objects.equals(this.result, inlineResponse400.result) &&
+    return Objects.equals(this.resultado, inlineResponse400.resultado) &&
         Objects.equals(this.status, inlineResponse400.status) &&
-        Objects.equals(this.details, inlineResponse400.details);
+        Objects.equals(this.detalhes, inlineResponse400.detalhes);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(result, status, details);
+    return Objects.hash(resultado, status, detalhes);
   }
 
 
@@ -112,9 +112,9 @@ public class InlineResponse400 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse400 {\n");
     
-    sb.append("    result: ").append(toIndentedString(result)).append("\n");
+    sb.append("    resultado: ").append(toIndentedString(resultado)).append("\n");
     sb.append("    status: ").append(toIndentedString(status)).append("\n");
-    sb.append("    details: ").append(toIndentedString(details)).append("\n");
+    sb.append("    detalhes: ").append(toIndentedString(detalhes)).append("\n");
     sb.append("}");
     return sb.toString();
   }

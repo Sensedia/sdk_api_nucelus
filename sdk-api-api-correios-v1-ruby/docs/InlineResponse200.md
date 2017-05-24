@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**county** | **String** | County&#39;s name | [optional] 
-**start** | **String** | Zipcode range start | [optional] 
-**_end** | **String** | Zipcode range end | [optional] 
+**nome** | **String** | Nome do municipio | [optional] 
+**inicio** | **String** | inicio da faixa de CEP | [optional] 
+**fim** | **String** | Fim da faixa de CEP | [optional] 
 
 

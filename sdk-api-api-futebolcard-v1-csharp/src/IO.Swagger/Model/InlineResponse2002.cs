@@ -34,7 +34,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Subsectors">Subsectors.</param>
         /// <param name="Map">Map.</param>
-        public InlineResponse2002(List<InlineResponse2002Subsectors> Subsectors = default(List<InlineResponse2002Subsectors>), List<InlineResponse2001Map> Map = default(List<InlineResponse2001Map>))
+        public InlineResponse2002(List<InlineResponse2002Subsectors> Subsectors = default(List<InlineResponse2002Subsectors>), InlineResponse2001Map Map = default(InlineResponse2001Map))
         {
             this.Subsectors = Subsectors;
             this.Map = Map;
@@ -49,7 +49,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Map
         /// </summary>
         [DataMember(Name="map", EmitDefaultValue=false)]
-        public List<InlineResponse2001Map> Map { get; set; }
+        public InlineResponse2001Map Map { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +104,7 @@ namespace IO.Swagger.Model
                 (
                     this.Map == other.Map ||
                     this.Map != null &&
-                    this.Map.SequenceEqual(other.Map)
+                    this.Map.Equals(other.Map)
                 );
         }
 

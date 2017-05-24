@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 

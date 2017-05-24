@@ -83,9 +83,9 @@ class InlineResponse2002SubsectorsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "subsector_id"
      */
-    public function testPropertyId()
+    public function testPropertySubsectorId()
     {
 
     }
@@ -99,9 +99,9 @@ class InlineResponse2002SubsectorsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "has_ticket"
+     * Test attribute "has_tickets"
      */
-    public function testPropertyHasTicket()
+    public function testPropertyHasTickets()
     {
 
     }

@@ -12,7 +12,7 @@
 
 package io.swagger.client.model;
 
-import io.swagger.client.model.InlineResponse2001Coordinates;
+import io.swagger.client.model.InlineResponse2001MapCoordinates;
 import java.util.*;
 import io.swagger.annotations.*;
 import com.google.gson.annotations.SerializedName;
@@ -23,7 +23,7 @@ public class InlineResponse2001Map {
   @SerializedName("url")
   private String url = null;
   @SerializedName("coordinates")
-  private List<InlineResponse2001Coordinates> coordinates = null;
+  private List<InlineResponse2001MapCoordinates> coordinates = null;
 
   /**
    **/
@@ -38,10 +38,10 @@ public class InlineResponse2001Map {
   /**
    **/
   @ApiModelProperty(value = "")
-  public List<InlineResponse2001Coordinates> getCoordinates() {
+  public List<InlineResponse2001MapCoordinates> getCoordinates() {
     return coordinates;
   }
-  public void setCoordinates(List<InlineResponse2001Coordinates> coordinates) {
+  public void setCoordinates(List<InlineResponse2001MapCoordinates> coordinates) {
     this.coordinates = coordinates;
   }
 

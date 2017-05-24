@@ -17,20 +17,20 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.InlineResponse2001Coordinates;
+import io.swagger.client.model.InlineResponse2001MapCoordinates;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * InlineResponse2001Map
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:08:03.639Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:46:22.524Z")
 public class InlineResponse2001Map {
   @SerializedName("url")
   private String url = null;
 
   @SerializedName("coordinates")
-  private List<InlineResponse2001Coordinates> coordinates = new ArrayList<InlineResponse2001Coordinates>();
+  private List<InlineResponse2001MapCoordinates> coordinates = new ArrayList<InlineResponse2001MapCoordinates>();
 
   public InlineResponse2001Map url(String url) {
     this.url = url;
@@ -50,12 +50,12 @@ public class InlineResponse2001Map {
     this.url = url;
   }
 
-  public InlineResponse2001Map coordinates(List<InlineResponse2001Coordinates> coordinates) {
+  public InlineResponse2001Map coordinates(List<InlineResponse2001MapCoordinates> coordinates) {
     this.coordinates = coordinates;
     return this;
   }
 
-  public InlineResponse2001Map addCoordinatesItem(InlineResponse2001Coordinates coordinatesItem) {
+  public InlineResponse2001Map addCoordinatesItem(InlineResponse2001MapCoordinates coordinatesItem) {
     this.coordinates.add(coordinatesItem);
     return this;
   }
@@ -65,11 +65,11 @@ public class InlineResponse2001Map {
    * @return coordinates
   **/
   @ApiModelProperty(example = "null", value = "")
-  public List<InlineResponse2001Coordinates> getCoordinates() {
+  public List<InlineResponse2001MapCoordinates> getCoordinates() {
     return coordinates;
   }
 
-  public void setCoordinates(List<InlineResponse2001Coordinates> coordinates) {
+  public void setCoordinates(List<InlineResponse2001MapCoordinates> coordinates) {
     this.coordinates = coordinates;
   }
 

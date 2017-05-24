@@ -3,7 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**object_number** | **String** |  | [optional] 
-**eventos** | [**Array&lt;ObjectsEventos&gt;**](ObjectsEventos.md) |  | [optional] 
+**tipo_evento** | **String** |  | [optional] 
+**status_evento** | **Integer** |  | [optional] 
+**descricao_evento** | **String** |  | [optional] 
 
 

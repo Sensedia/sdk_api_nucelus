@@ -55,7 +55,7 @@ class Sectors implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'gates' => '\Swagger\Client\Model\InlineResponse2001Gates[]',
-        'map' => '\Swagger\Client\Model\InlineResponse2001Map[]'
+        'map' => '\Swagger\Client\Model\InlineResponse2001Map'
     ];
 
     public static function swaggerTypes()
@@ -175,7 +175,7 @@ class Sectors implements ArrayAccess
 
     /**
      * Gets map
-     * @return \Swagger\Client\Model\InlineResponse2001Map[]
+     * @return \Swagger\Client\Model\InlineResponse2001Map
      */
     public function getMap()
     {
@@ -184,7 +184,7 @@ class Sectors implements ArrayAccess
 
     /**
      * Sets map
-     * @param \Swagger\Client\Model\InlineResponse2001Map[] $map
+     * @param \Swagger\Client\Model\InlineResponse2001Map $map
      * @return $this
      */
     public function setMap($map)

@@ -571,11 +571,11 @@ public class EventsApi {
      * @param accessToken Access token used in the authentication. (required)
      * @param eventId Event to search. (required)
      * @param sectorId Sector to search. (required)
-     * @return List&lt;InlineResponse2002&gt;
+     * @return InlineResponse2002
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public List<InlineResponse2002> eventsEventIdSectorsSectorIdSubsectorsGet(String clientId, String accessToken, String eventId, String sectorId) throws ApiException {
-        ApiResponse<List<InlineResponse2002>> resp = eventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(clientId, accessToken, eventId, sectorId);
+    public InlineResponse2002 eventsEventIdSectorsSectorIdSubsectorsGet(String clientId, String accessToken, String eventId, String sectorId) throws ApiException {
+        ApiResponse<InlineResponse2002> resp = eventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(clientId, accessToken, eventId, sectorId);
         return resp.getData();
     }
 
@@ -586,12 +586,12 @@ public class EventsApi {
      * @param accessToken Access token used in the authentication. (required)
      * @param eventId Event to search. (required)
      * @param sectorId Sector to search. (required)
-     * @return ApiResponse&lt;List&lt;InlineResponse2002&gt;&gt;
+     * @return ApiResponse&lt;InlineResponse2002&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      */
-    public ApiResponse<List<InlineResponse2002>> eventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(String clientId, String accessToken, String eventId, String sectorId) throws ApiException {
+    public ApiResponse<InlineResponse2002> eventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(String clientId, String accessToken, String eventId, String sectorId) throws ApiException {
         com.squareup.okhttp.Call call = eventsEventIdSectorsSectorIdSubsectorsGetValidateBeforeCall(clientId, accessToken, eventId, sectorId, null, null);
-        Type localVarReturnType = new TypeToken<List<InlineResponse2002>>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
         return apiClient.execute(call, localVarReturnType);
     }
 
@@ -606,7 +606,7 @@ public class EventsApi {
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
      */
-    public com.squareup.okhttp.Call eventsEventIdSectorsSectorIdSubsectorsGetAsync(String clientId, String accessToken, String eventId, String sectorId, final ApiCallback<List<InlineResponse2002>> callback) throws ApiException {
+    public com.squareup.okhttp.Call eventsEventIdSectorsSectorIdSubsectorsGetAsync(String clientId, String accessToken, String eventId, String sectorId, final ApiCallback<InlineResponse2002> callback) throws ApiException {
 
         ProgressResponseBody.ProgressListener progressListener = null;
         ProgressRequestBody.ProgressRequestListener progressRequestListener = null;
@@ -628,7 +628,7 @@ public class EventsApi {
         }
 
         com.squareup.okhttp.Call call = eventsEventIdSectorsSectorIdSubsectorsGetValidateBeforeCall(clientId, accessToken, eventId, sectorId, progressListener, progressRequestListener);
-        Type localVarReturnType = new TypeToken<List<InlineResponse2002>>(){}.getType();
+        Type localVarReturnType = new TypeToken<InlineResponse2002>(){}.getType();
         apiClient.executeAsync(call, localVarReturnType, callback);
         return call;
     }

@@ -105,7 +105,7 @@ public class EventsApiTest {
         String accessToken = null;
         String eventId = null;
         String sectorId = null;
-        List<InlineResponse2002> response = api.eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
+        InlineResponse2002 response = api.eventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
 
         // TODO: test validations
     }

@@ -54,9 +54,9 @@ class SubSectorDetails implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'string',
+        'subsector_id' => 'string',
         'name' => 'string',
-        'has_ticket' => 'int'
+        'has_tickets' => 'int'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +69,9 @@ class SubSectorDetails implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
+        'subsector_id' => 'subsectorId',
         'name' => 'name',
-        'has_ticket' => 'hasTicket'
+        'has_tickets' => 'hasTickets'
     ];
 
 
@@ -80,9 +80,9 @@ class SubSectorDetails implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
+        'subsector_id' => 'setSubsectorId',
         'name' => 'setName',
-        'has_ticket' => 'setHasTicket'
+        'has_tickets' => 'setHasTickets'
     ];
 
 
@@ -91,9 +91,9 @@ class SubSectorDetails implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
+        'subsector_id' => 'getSubsectorId',
         'name' => 'getName',
-        'has_ticket' => 'getHasTicket'
+        'has_tickets' => 'getHasTickets'
     ];
 
     public static function attributeMap()
@@ -127,9 +127,9 @@ class SubSectorDetails implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['subsector_id'] = isset($data['subsector_id']) ? $data['subsector_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['has_ticket'] = isset($data['has_ticket']) ? $data['has_ticket'] : null;
+        $this->container['has_tickets'] = isset($data['has_tickets']) ? $data['has_tickets'] : null;
     }
 
     /**
@@ -158,22 +158,22 @@ class SubSectorDetails implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets subsector_id
      * @return string
      */
-    public function getId()
+    public function getSubsectorId()
     {
-        return $this->container['id'];
+        return $this->container['subsector_id'];
     }
 
     /**
-     * Sets id
-     * @param string $id
+     * Sets subsector_id
+     * @param string $subsector_id
      * @return $this
      */
-    public function setId($id)
+    public function setSubsectorId($subsector_id)
     {
-        $this->container['id'] = $id;
+        $this->container['subsector_id'] = $subsector_id;
 
         return $this;
     }
@@ -200,22 +200,22 @@ class SubSectorDetails implements ArrayAccess
     }
 
     /**
-     * Gets has_ticket
+     * Gets has_tickets
      * @return int
      */
-    public function getHasTicket()
+    public function getHasTickets()
     {
-        return $this->container['has_ticket'];
+        return $this->container['has_tickets'];
     }
 
     /**
-     * Sets has_ticket
-     * @param int $has_ticket
+     * Sets has_tickets
+     * @param int $has_tickets
      * @return $this
      */
-    public function setHasTicket($has_ticket)
+    public function setHasTickets($has_tickets)
     {
-        $this->container['has_ticket'] = $has_ticket;
+        $this->container['has_tickets'] = $has_tickets;
 
         return $this;
     }

@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -32,42 +32,42 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse2001" /> class.
         /// </summary>
-        /// <param name="Street">Street&#39;s name..</param>
-        /// <param name="Neighborhood">Neighborhood name..</param>
-        /// <param name="County">County&#39;s name..</param>
-        /// <param name="State">State&#39;s abbreviation..</param>
-        public InlineResponse2001(string Street = default(string), string Neighborhood = default(string), string County = default(string), string State = default(string))
+        /// <param name="Logradouro">Nome do logradouro.</param>
+        /// <param name="Bairro">Nome do Bairro.</param>
+        /// <param name="Municipio">Nome do municipio.</param>
+        /// <param name="Uf">Estado.</param>
+        public InlineResponse2001(string Logradouro = default(string), string Bairro = default(string), string Municipio = default(string), string Uf = default(string))
         {
-            this.Street = Street;
-            this.Neighborhood = Neighborhood;
-            this.County = County;
-            this.State = State;
+            this.Logradouro = Logradouro;
+            this.Bairro = Bairro;
+            this.Municipio = Municipio;
+            this.Uf = Uf;
         }
         
         /// <summary>
-        /// Street&#39;s name.
+        /// Nome do logradouro
         /// </summary>
-        /// <value>Street&#39;s name.</value>
-        [DataMember(Name="street", EmitDefaultValue=false)]
-        public string Street { get; set; }
+        /// <value>Nome do logradouro</value>
+        [DataMember(Name="logradouro", EmitDefaultValue=false)]
+        public string Logradouro { get; set; }
         /// <summary>
-        /// Neighborhood name.
+        /// Nome do Bairro
         /// </summary>
-        /// <value>Neighborhood name.</value>
-        [DataMember(Name="neighborhood", EmitDefaultValue=false)]
-        public string Neighborhood { get; set; }
+        /// <value>Nome do Bairro</value>
+        [DataMember(Name="bairro", EmitDefaultValue=false)]
+        public string Bairro { get; set; }
         /// <summary>
-        /// County&#39;s name.
+        /// Nome do municipio
         /// </summary>
-        /// <value>County&#39;s name.</value>
-        [DataMember(Name="county", EmitDefaultValue=false)]
-        public string County { get; set; }
+        /// <value>Nome do municipio</value>
+        [DataMember(Name="municipio", EmitDefaultValue=false)]
+        public string Municipio { get; set; }
         /// <summary>
-        /// State&#39;s abbreviation.
+        /// Estado
         /// </summary>
-        /// <value>State&#39;s abbreviation.</value>
-        [DataMember(Name="state", EmitDefaultValue=false)]
-        public string State { get; set; }
+        /// <value>Estado</value>
+        [DataMember(Name="uf", EmitDefaultValue=false)]
+        public string Uf { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,10 +76,10 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse2001 {\n");
-            sb.Append("  Street: ").Append(Street).Append("\n");
-            sb.Append("  Neighborhood: ").Append(Neighborhood).Append("\n");
-            sb.Append("  County: ").Append(County).Append("\n");
-            sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  Logradouro: ").Append(Logradouro).Append("\n");
+            sb.Append("  Bairro: ").Append(Bairro).Append("\n");
+            sb.Append("  Municipio: ").Append(Municipio).Append("\n");
+            sb.Append("  Uf: ").Append(Uf).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -117,24 +117,24 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Street == other.Street ||
-                    this.Street != null &&
-                    this.Street.Equals(other.Street)
+                    this.Logradouro == other.Logradouro ||
+                    this.Logradouro != null &&
+                    this.Logradouro.Equals(other.Logradouro)
                 ) && 
                 (
-                    this.Neighborhood == other.Neighborhood ||
-                    this.Neighborhood != null &&
-                    this.Neighborhood.Equals(other.Neighborhood)
+                    this.Bairro == other.Bairro ||
+                    this.Bairro != null &&
+                    this.Bairro.Equals(other.Bairro)
                 ) && 
                 (
-                    this.County == other.County ||
-                    this.County != null &&
-                    this.County.Equals(other.County)
+                    this.Municipio == other.Municipio ||
+                    this.Municipio != null &&
+                    this.Municipio.Equals(other.Municipio)
                 ) && 
                 (
-                    this.State == other.State ||
-                    this.State != null &&
-                    this.State.Equals(other.State)
+                    this.Uf == other.Uf ||
+                    this.Uf != null &&
+                    this.Uf.Equals(other.Uf)
                 );
         }
 
@@ -149,14 +149,14 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Street != null)
-                    hash = hash * 59 + this.Street.GetHashCode();
-                if (this.Neighborhood != null)
-                    hash = hash * 59 + this.Neighborhood.GetHashCode();
-                if (this.County != null)
-                    hash = hash * 59 + this.County.GetHashCode();
-                if (this.State != null)
-                    hash = hash * 59 + this.State.GetHashCode();
+                if (this.Logradouro != null)
+                    hash = hash * 59 + this.Logradouro.GetHashCode();
+                if (this.Bairro != null)
+                    hash = hash * 59 + this.Bairro.GetHashCode();
+                if (this.Municipio != null)
+                    hash = hash * 59 + this.Municipio.GetHashCode();
+                if (this.Uf != null)
+                    hash = hash * 59 + this.Uf.GetHashCode();
                 return hash;
             }
         }

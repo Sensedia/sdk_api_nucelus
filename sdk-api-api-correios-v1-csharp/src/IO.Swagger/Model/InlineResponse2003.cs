@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -24,7 +24,7 @@ using System.ComponentModel.DataAnnotations;
 namespace IO.Swagger.Model
 {
     /// <summary>
-    /// Postal Object model
+    /// Customer Model
     /// </summary>
     [DataContract]
     public partial class InlineResponse2003 :  IEquatable<InlineResponse2003>, IValidatableObject
@@ -32,25 +32,34 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse2003" /> class.
         /// </summary>
-        /// <param name="ObjectNumber">.</param>
-        /// <param name="Eventos">Eventos.</param>
-        public InlineResponse2003(string ObjectNumber = default(string), List<ObjectsEventos> Eventos = default(List<ObjectsEventos>))
+        /// <param name="TipoEvento">.</param>
+        /// <param name="StatusEvento">.</param>
+        /// <param name="DescricaoEvento">.</param>
+        public InlineResponse2003(string TipoEvento = default(string), int? StatusEvento = default(int?), string DescricaoEvento = default(string))
         {
-            this.ObjectNumber = ObjectNumber;
-            this.Eventos = Eventos;
+            this.TipoEvento = TipoEvento;
+            this.StatusEvento = StatusEvento;
+            this.DescricaoEvento = DescricaoEvento;
         }
         
         /// <summary>
         /// 
         /// </summary>
         /// <value></value>
-        [DataMember(Name="objectNumber", EmitDefaultValue=false)]
-        public string ObjectNumber { get; set; }
+        [DataMember(Name="tipoEvento", EmitDefaultValue=false)]
+        public string TipoEvento { get; set; }
         /// <summary>
-        /// Gets or Sets Eventos
+        /// 
         /// </summary>
-        [DataMember(Name="eventos", EmitDefaultValue=false)]
-        public List<ObjectsEventos> Eventos { get; set; }
+        /// <value></value>
+        [DataMember(Name="statusEvento", EmitDefaultValue=false)]
+        public int? StatusEvento { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <value></value>
+        [DataMember(Name="descricaoEvento", EmitDefaultValue=false)]
+        public string DescricaoEvento { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -59,8 +68,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse2003 {\n");
-            sb.Append("  ObjectNumber: ").Append(ObjectNumber).Append("\n");
-            sb.Append("  Eventos: ").Append(Eventos).Append("\n");
+            sb.Append("  TipoEvento: ").Append(TipoEvento).Append("\n");
+            sb.Append("  StatusEvento: ").Append(StatusEvento).Append("\n");
+            sb.Append("  DescricaoEvento: ").Append(DescricaoEvento).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,14 +108,19 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.ObjectNumber == other.ObjectNumber ||
-                    this.ObjectNumber != null &&
-                    this.ObjectNumber.Equals(other.ObjectNumber)
+                    this.TipoEvento == other.TipoEvento ||
+                    this.TipoEvento != null &&
+                    this.TipoEvento.Equals(other.TipoEvento)
                 ) && 
                 (
-                    this.Eventos == other.Eventos ||
-                    this.Eventos != null &&
-                    this.Eventos.SequenceEqual(other.Eventos)
+                    this.StatusEvento == other.StatusEvento ||
+                    this.StatusEvento != null &&
+                    this.StatusEvento.Equals(other.StatusEvento)
+                ) && 
+                (
+                    this.DescricaoEvento == other.DescricaoEvento ||
+                    this.DescricaoEvento != null &&
+                    this.DescricaoEvento.Equals(other.DescricaoEvento)
                 );
         }
 
@@ -120,10 +135,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.ObjectNumber != null)
-                    hash = hash * 59 + this.ObjectNumber.GetHashCode();
-                if (this.Eventos != null)
-                    hash = hash * 59 + this.Eventos.GetHashCode();
+                if (this.TipoEvento != null)
+                    hash = hash * 59 + this.TipoEvento.GetHashCode();
+                if (this.StatusEvento != null)
+                    hash = hash * 59 + this.StatusEvento.GetHashCode();
+                if (this.DescricaoEvento != null)
+                    hash = hash * 59 + this.DescricaoEvento.GetHashCode();
                 return hash;
             }
         }

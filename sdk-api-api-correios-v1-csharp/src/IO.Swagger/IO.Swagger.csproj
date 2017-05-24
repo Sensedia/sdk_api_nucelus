@@ -2,7 +2,7 @@
 <!--
 API dos Correios
 
-Postal Object tracking API
+API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -11,7 +11,7 @@ OpenAPI spec version: 1.0
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A46919DB-A76A-41F5-92FD-A300E3700358}</ProjectGuid>
+    <ProjectGuid>{A124C61B-EE80-4287-81A7-510703A25FFF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IO.Swagger</RootNamespace>

@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -55,10 +55,10 @@ class InlineResponse2001 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'street' => 'string',
-        'neighborhood' => 'string',
-        'county' => 'string',
-        'state' => 'string'
+        'logradouro' => 'string',
+        'bairro' => 'string',
+        'municipio' => 'string',
+        'uf' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -71,10 +71,10 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'street' => 'street',
-        'neighborhood' => 'neighborhood',
-        'county' => 'county',
-        'state' => 'state'
+        'logradouro' => 'logradouro',
+        'bairro' => 'bairro',
+        'municipio' => 'municipio',
+        'uf' => 'uf'
     ];
 
 
@@ -83,10 +83,10 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'street' => 'setStreet',
-        'neighborhood' => 'setNeighborhood',
-        'county' => 'setCounty',
-        'state' => 'setState'
+        'logradouro' => 'setLogradouro',
+        'bairro' => 'setBairro',
+        'municipio' => 'setMunicipio',
+        'uf' => 'setUf'
     ];
 
 
@@ -95,10 +95,10 @@ class InlineResponse2001 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'street' => 'getStreet',
-        'neighborhood' => 'getNeighborhood',
-        'county' => 'getCounty',
-        'state' => 'getState'
+        'logradouro' => 'getLogradouro',
+        'bairro' => 'getBairro',
+        'municipio' => 'getMunicipio',
+        'uf' => 'getUf'
     ];
 
     public static function attributeMap()
@@ -132,10 +132,10 @@ class InlineResponse2001 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['street'] = isset($data['street']) ? $data['street'] : null;
-        $this->container['neighborhood'] = isset($data['neighborhood']) ? $data['neighborhood'] : null;
-        $this->container['county'] = isset($data['county']) ? $data['county'] : null;
-        $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['logradouro'] = isset($data['logradouro']) ? $data['logradouro'] : null;
+        $this->container['bairro'] = isset($data['bairro']) ? $data['bairro'] : null;
+        $this->container['municipio'] = isset($data['municipio']) ? $data['municipio'] : null;
+        $this->container['uf'] = isset($data['uf']) ? $data['uf'] : null;
     }
 
     /**
@@ -164,85 +164,85 @@ class InlineResponse2001 implements ArrayAccess
 
 
     /**
-     * Gets street
+     * Gets logradouro
      * @return string
      */
-    public function getStreet()
+    public function getLogradouro()
     {
-        return $this->container['street'];
+        return $this->container['logradouro'];
     }
 
     /**
-     * Sets street
-     * @param string $street Street's name.
+     * Sets logradouro
+     * @param string $logradouro Nome do logradouro
      * @return $this
      */
-    public function setStreet($street)
+    public function setLogradouro($logradouro)
     {
-        $this->container['street'] = $street;
+        $this->container['logradouro'] = $logradouro;
 
         return $this;
     }
 
     /**
-     * Gets neighborhood
+     * Gets bairro
      * @return string
      */
-    public function getNeighborhood()
+    public function getBairro()
     {
-        return $this->container['neighborhood'];
+        return $this->container['bairro'];
     }
 
     /**
-     * Sets neighborhood
-     * @param string $neighborhood Neighborhood name.
+     * Sets bairro
+     * @param string $bairro Nome do Bairro
      * @return $this
      */
-    public function setNeighborhood($neighborhood)
+    public function setBairro($bairro)
     {
-        $this->container['neighborhood'] = $neighborhood;
+        $this->container['bairro'] = $bairro;
 
         return $this;
     }
 
     /**
-     * Gets county
+     * Gets municipio
      * @return string
      */
-    public function getCounty()
+    public function getMunicipio()
     {
-        return $this->container['county'];
+        return $this->container['municipio'];
     }
 
     /**
-     * Sets county
-     * @param string $county County's name.
+     * Sets municipio
+     * @param string $municipio Nome do municipio
      * @return $this
      */
-    public function setCounty($county)
+    public function setMunicipio($municipio)
     {
-        $this->container['county'] = $county;
+        $this->container['municipio'] = $municipio;
 
         return $this;
     }
 
     /**
-     * Gets state
+     * Gets uf
      * @return string
      */
-    public function getState()
+    public function getUf()
     {
-        return $this->container['state'];
+        return $this->container['uf'];
     }
 
     /**
-     * Sets state
-     * @param string $state State's abbreviation.
+     * Sets uf
+     * @param string $uf Estado
      * @return $this
      */
-    public function setState($state)
+    public function setUf($uf)
     {
-        $this->container['state'] = $state;
+        $this->container['uf'] = $uf;
 
         return $this;
     }

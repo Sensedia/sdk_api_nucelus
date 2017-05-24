@@ -3,7 +3,7 @@
 """
     API dos Correios
 
-    Postal Object tracking API
+    API de rastreios de Objetos Postais
 
     OpenAPI spec version: 1.0
     
@@ -36,6 +36,6 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     long_description="""\
-    Postal Object tracking API
+    API de rastreios de Objetos Postais
     """
 )

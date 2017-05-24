@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -35,7 +35,7 @@ use \ArrayAccess;
  * InlineResponse2002 Class Doc Comment
  *
  * @category    Class
- * @description Customer Model
+ * @description Postal Object model
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -55,9 +55,8 @@ class InlineResponse2002 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'event_type' => 'string',
-        'event_status' => 'int',
-        'event_description' => 'string'
+        'numero' => 'string',
+        'eventos' => '\Swagger\Client\Model\ObjetosEventos[]'
     ];
 
     public static function swaggerTypes()
@@ -70,9 +69,8 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'event_type' => 'eventType',
-        'event_status' => 'eventStatus',
-        'event_description' => 'eventDescription'
+        'numero' => 'numero',
+        'eventos' => 'eventos'
     ];
 
 
@@ -81,9 +79,8 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'event_type' => 'setEventType',
-        'event_status' => 'setEventStatus',
-        'event_description' => 'setEventDescription'
+        'numero' => 'setNumero',
+        'eventos' => 'setEventos'
     ];
 
 
@@ -92,9 +89,8 @@ class InlineResponse2002 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'event_type' => 'getEventType',
-        'event_status' => 'getEventStatus',
-        'event_description' => 'getEventDescription'
+        'numero' => 'getNumero',
+        'eventos' => 'getEventos'
     ];
 
     public static function attributeMap()
@@ -128,9 +124,8 @@ class InlineResponse2002 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event_type'] = isset($data['event_type']) ? $data['event_type'] : null;
-        $this->container['event_status'] = isset($data['event_status']) ? $data['event_status'] : null;
-        $this->container['event_description'] = isset($data['event_description']) ? $data['event_description'] : null;
+        $this->container['numero'] = isset($data['numero']) ? $data['numero'] : null;
+        $this->container['eventos'] = isset($data['eventos']) ? $data['eventos'] : null;
     }
 
     /**
@@ -159,64 +154,43 @@ class InlineResponse2002 implements ArrayAccess
 
 
     /**
-     * Gets event_type
+     * Gets numero
      * @return string
      */
-    public function getEventType()
+    public function getNumero()
     {
-        return $this->container['event_type'];
+        return $this->container['numero'];
     }
 
     /**
-     * Sets event_type
-     * @param string $event_type 
+     * Sets numero
+     * @param string $numero 
      * @return $this
      */
-    public function setEventType($event_type)
+    public function setNumero($numero)
     {
-        $this->container['event_type'] = $event_type;
+        $this->container['numero'] = $numero;
 
         return $this;
     }
 
     /**
-     * Gets event_status
-     * @return int
+     * Gets eventos
+     * @return \Swagger\Client\Model\ObjetosEventos[]
      */
-    public function getEventStatus()
+    public function getEventos()
     {
-        return $this->container['event_status'];
+        return $this->container['eventos'];
     }
 
     /**
-     * Sets event_status
-     * @param int $event_status 
+     * Sets eventos
+     * @param \Swagger\Client\Model\ObjetosEventos[] $eventos
      * @return $this
      */
-    public function setEventStatus($event_status)
+    public function setEventos($eventos)
     {
-        $this->container['event_status'] = $event_status;
-
-        return $this;
-    }
-
-    /**
-     * Gets event_description
-     * @return string
-     */
-    public function getEventDescription()
-    {
-        return $this->container['event_description'];
-    }
-
-    /**
-     * Sets event_description
-     * @param string $event_description 
-     * @return $this
-     */
-    public function setEventDescription($event_description)
-    {
-        $this->container['event_description'] = $event_description;
+        $this->container['eventos'] = $eventos;
 
         return $this;
     }

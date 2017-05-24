@@ -112,8 +112,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>List&lt;InlineResponse2002&gt;</returns>
-        List<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId);
+        /// <returns>InlineResponse2002</returns>
+        InlineResponse2002 EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId);
 
         /// <summary>
         /// 
@@ -126,8 +126,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse2002&gt;</returns>
-        ApiResponse<List<InlineResponse2002>> EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId);
+        /// <returns>ApiResponse of InlineResponse2002</returns>
+        ApiResponse<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId);
         /// <summary>
         /// 
         /// </summary>
@@ -270,8 +270,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>Task of List&lt;InlineResponse2002&gt;</returns>
-        System.Threading.Tasks.Task<List<InlineResponse2002>> EventsEventIdSectorsSectorIdSubsectorsGetAsync (string clientId, string accessToken, string eventId, string sectorId);
+        /// <returns>Task of InlineResponse2002</returns>
+        System.Threading.Tasks.Task<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGetAsync (string clientId, string accessToken, string eventId, string sectorId);
 
         /// <summary>
         /// 
@@ -284,8 +284,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse2002&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2002>>> EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId);
+        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
+        System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId);
         /// <summary>
         /// 
         /// </summary>
@@ -959,10 +959,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>List&lt;InlineResponse2002&gt;</returns>
-        public List<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId)
+        /// <returns>InlineResponse2002</returns>
+        public InlineResponse2002 EventsEventIdSectorsSectorIdSubsectorsGet (string clientId, string accessToken, string eventId, string sectorId)
         {
-             ApiResponse<List<InlineResponse2002>> localVarResponse = EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(clientId, accessToken, eventId, sectorId);
+             ApiResponse<InlineResponse2002> localVarResponse = EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo(clientId, accessToken, eventId, sectorId);
              return localVarResponse.Data;
         }
 
@@ -974,8 +974,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>ApiResponse of List&lt;InlineResponse2002&gt;</returns>
-        public ApiResponse< List<InlineResponse2002> > EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId)
+        /// <returns>ApiResponse of InlineResponse2002</returns>
+        public ApiResponse< InlineResponse2002 > EventsEventIdSectorsSectorIdSubsectorsGetWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1032,9 +1032,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<InlineResponse2002>>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InlineResponse2002>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2002>)));
+                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
             
         }
 
@@ -1046,10 +1046,10 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>Task of List&lt;InlineResponse2002&gt;</returns>
-        public async System.Threading.Tasks.Task<List<InlineResponse2002>> EventsEventIdSectorsSectorIdSubsectorsGetAsync (string clientId, string accessToken, string eventId, string sectorId)
+        /// <returns>Task of InlineResponse2002</returns>
+        public async System.Threading.Tasks.Task<InlineResponse2002> EventsEventIdSectorsSectorIdSubsectorsGetAsync (string clientId, string accessToken, string eventId, string sectorId)
         {
-             ApiResponse<List<InlineResponse2002>> localVarResponse = await EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo(clientId, accessToken, eventId, sectorId);
+             ApiResponse<InlineResponse2002> localVarResponse = await EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo(clientId, accessToken, eventId, sectorId);
              return localVarResponse.Data;
 
         }
@@ -1062,8 +1062,8 @@ namespace IO.Swagger.Api
         /// <param name="accessToken">Access token used in the authentication.</param>
         /// <param name="eventId">Event to search.</param>
         /// <param name="sectorId">Sector to search.</param>
-        /// <returns>Task of ApiResponse (List&lt;InlineResponse2002&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<InlineResponse2002>>> EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId)
+        /// <returns>Task of ApiResponse (InlineResponse2002)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<InlineResponse2002>> EventsEventIdSectorsSectorIdSubsectorsGetAsyncWithHttpInfo (string clientId, string accessToken, string eventId, string sectorId)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -1120,9 +1120,9 @@ namespace IO.Swagger.Api
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<List<InlineResponse2002>>(localVarStatusCode,
+            return new ApiResponse<InlineResponse2002>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (List<InlineResponse2002>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<InlineResponse2002>)));
+                (InlineResponse2002) Configuration.ApiClient.Deserialize(localVarResponse, typeof(InlineResponse2002)));
             
         }
 

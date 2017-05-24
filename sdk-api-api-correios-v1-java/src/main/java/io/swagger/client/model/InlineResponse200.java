@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -22,69 +22,69 @@ import io.swagger.annotations.ApiModelProperty;
  * Customer Model
  */
 @ApiModel(description = "Customer Model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class InlineResponse200 {
-  @SerializedName("county")
-  private String county = null;
+  @SerializedName("nome")
+  private String nome = null;
 
-  @SerializedName("start")
-  private String start = null;
+  @SerializedName("inicio")
+  private String inicio = null;
 
-  @SerializedName("end")
-  private String end = null;
+  @SerializedName("fim")
+  private String fim = null;
 
-  public InlineResponse200 county(String county) {
-    this.county = county;
+  public InlineResponse200 nome(String nome) {
+    this.nome = nome;
     return this;
   }
 
    /**
-   * County's name
-   * @return county
+   * Nome do municipio
+   * @return nome
   **/
-  @ApiModelProperty(example = "Campinas", value = "County's name")
-  public String getCounty() {
-    return county;
+  @ApiModelProperty(example = "Campinas", value = "Nome do municipio")
+  public String getNome() {
+    return nome;
   }
 
-  public void setCounty(String county) {
-    this.county = county;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
-  public InlineResponse200 start(String start) {
-    this.start = start;
+  public InlineResponse200 inicio(String inicio) {
+    this.inicio = inicio;
     return this;
   }
 
    /**
-   * Zipcode range start
-   * @return start
+   * inicio da faixa de CEP
+   * @return inicio
   **/
-  @ApiModelProperty(example = "13000001", value = "Zipcode range start")
-  public String getStart() {
-    return start;
+  @ApiModelProperty(example = "13000001", value = "inicio da faixa de CEP")
+  public String getInicio() {
+    return inicio;
   }
 
-  public void setStart(String start) {
-    this.start = start;
+  public void setInicio(String inicio) {
+    this.inicio = inicio;
   }
 
-  public InlineResponse200 end(String end) {
-    this.end = end;
+  public InlineResponse200 fim(String fim) {
+    this.fim = fim;
     return this;
   }
 
    /**
-   * Zipcode range end
-   * @return end
+   * Fim da faixa de CEP
+   * @return fim
   **/
-  @ApiModelProperty(example = "13139999", value = "Zipcode range end")
-  public String getEnd() {
-    return end;
+  @ApiModelProperty(example = "13139999", value = "Fim da faixa de CEP")
+  public String getFim() {
+    return fim;
   }
 
-  public void setEnd(String end) {
-    this.end = end;
+  public void setFim(String fim) {
+    this.fim = fim;
   }
 
 
@@ -97,14 +97,14 @@ public class InlineResponse200 {
       return false;
     }
     InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return Objects.equals(this.county, inlineResponse200.county) &&
-        Objects.equals(this.start, inlineResponse200.start) &&
-        Objects.equals(this.end, inlineResponse200.end);
+    return Objects.equals(this.nome, inlineResponse200.nome) &&
+        Objects.equals(this.inicio, inlineResponse200.inicio) &&
+        Objects.equals(this.fim, inlineResponse200.fim);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(county, start, end);
+    return Objects.hash(nome, inicio, fim);
   }
 
 
@@ -113,9 +113,9 @@ public class InlineResponse200 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse200 {\n");
     
-    sb.append("    county: ").append(toIndentedString(county)).append("\n");
-    sb.append("    start: ").append(toIndentedString(start)).append("\n");
-    sb.append("    end: ").append(toIndentedString(end)).append("\n");
+    sb.append("    nome: ").append(toIndentedString(nome)).append("\n");
+    sb.append("    inicio: ").append(toIndentedString(inicio)).append("\n");
+    sb.append("    fim: ").append(toIndentedString(fim)).append("\n");
     sb.append("}");
     return sb.toString();
   }

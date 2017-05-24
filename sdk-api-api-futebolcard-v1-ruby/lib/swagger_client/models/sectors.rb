@@ -31,7 +31,7 @@ module SwaggerClient
     def self.swagger_types
       {
         :'gates' => :'Array<InlineResponse2001Gates>',
-        :'map' => :'Array<InlineResponse2001Map>'
+        :'map' => :'InlineResponse2001Map'
       }
     end
 
@@ -50,9 +50,7 @@ module SwaggerClient
       end
 
       if attributes.has_key?(:'map')
-        if (value = attributes[:'map']).is_a?(Array)
-          self.map = value
-        end
+        self.map = attributes[:'map']
       end
 
     end

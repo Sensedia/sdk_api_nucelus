@@ -162,7 +162,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **eventsEventIdSectorsSectorIdSubsectorsGet**
-> \Swagger\Client\Model\InlineResponse2002[] eventsEventIdSectorsSectorIdSubsectorsGet($client_id, $access_token, $event_id, $sector_id)
+> \Swagger\Client\Model\InlineResponse2002 eventsEventIdSectorsSectorIdSubsectorsGet($client_id, $access_token, $event_id, $sector_id)
 
 
 
@@ -199,7 +199,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002[]**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 

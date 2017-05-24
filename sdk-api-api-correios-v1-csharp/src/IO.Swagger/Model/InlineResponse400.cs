@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -32,31 +32,31 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse400" /> class.
         /// </summary>
-        /// <param name="Result">Result.</param>
+        /// <param name="Resultado">Resultado.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="Details">Details.</param>
-        public InlineResponse400(string Result = default(string), string Status = default(string), string Details = default(string))
+        /// <param name="Detalhes">Detalhes.</param>
+        public InlineResponse400(string Resultado = default(string), string Status = default(string), string Detalhes = default(string))
         {
-            this.Result = Result;
+            this.Resultado = Resultado;
             this.Status = Status;
-            this.Details = Details;
+            this.Detalhes = Detalhes;
         }
         
         /// <summary>
-        /// Gets or Sets Result
+        /// Gets or Sets Resultado
         /// </summary>
-        [DataMember(Name="result", EmitDefaultValue=false)]
-        public string Result { get; set; }
+        [DataMember(Name="resultado", EmitDefaultValue=false)]
+        public string Resultado { get; set; }
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
         /// <summary>
-        /// Gets or Sets Details
+        /// Gets or Sets Detalhes
         /// </summary>
-        [DataMember(Name="details", EmitDefaultValue=false)]
-        public string Details { get; set; }
+        [DataMember(Name="detalhes", EmitDefaultValue=false)]
+        public string Detalhes { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,9 +65,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse400 {\n");
-            sb.Append("  Result: ").Append(Result).Append("\n");
+            sb.Append("  Resultado: ").Append(Resultado).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
-            sb.Append("  Details: ").Append(Details).Append("\n");
+            sb.Append("  Detalhes: ").Append(Detalhes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,9 +105,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Result == other.Result ||
-                    this.Result != null &&
-                    this.Result.Equals(other.Result)
+                    this.Resultado == other.Resultado ||
+                    this.Resultado != null &&
+                    this.Resultado.Equals(other.Resultado)
                 ) && 
                 (
                     this.Status == other.Status ||
@@ -115,9 +115,9 @@ namespace IO.Swagger.Model
                     this.Status.Equals(other.Status)
                 ) && 
                 (
-                    this.Details == other.Details ||
-                    this.Details != null &&
-                    this.Details.Equals(other.Details)
+                    this.Detalhes == other.Detalhes ||
+                    this.Detalhes != null &&
+                    this.Detalhes.Equals(other.Detalhes)
                 );
         }
 
@@ -132,12 +132,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Result != null)
-                    hash = hash * 59 + this.Result.GetHashCode();
+                if (this.Resultado != null)
+                    hash = hash * 59 + this.Resultado.GetHashCode();
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
-                if (this.Details != null)
-                    hash = hash * 59 + this.Details.GetHashCode();
+                if (this.Detalhes != null)
+                    hash = hash * 59 + this.Detalhes.GetHashCode();
                 return hash;
             }
         }

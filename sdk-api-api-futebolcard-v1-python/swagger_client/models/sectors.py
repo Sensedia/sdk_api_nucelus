@@ -32,7 +32,7 @@ class Sectors(object):
         """
         self.swagger_types = {
             'gates': 'list[InlineResponse2001Gates]',
-            'map': 'list[InlineResponse2001Map]'
+            'map': 'InlineResponse2001Map'
         }
 
         self.attribute_map = {
@@ -70,7 +70,7 @@ class Sectors(object):
         Gets the map of this Sectors.
 
         :return: The map of this Sectors.
-        :rtype: list[InlineResponse2001Map]
+        :rtype: InlineResponse2001Map
         """
         return self._map
 
@@ -80,7 +80,7 @@ class Sectors(object):
         Sets the map of this Sectors.
 
         :param map: The map of this Sectors.
-        :type: list[InlineResponse2001Map]
+        :type: InlineResponse2001Map
         """
 
         self._map = map

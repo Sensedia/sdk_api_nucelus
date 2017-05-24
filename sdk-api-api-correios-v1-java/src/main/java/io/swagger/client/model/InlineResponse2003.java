@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -17,61 +17,74 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.client.model.ObjectsEventos;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
- * Postal Object model
+ * Customer Model
  */
-@ApiModel(description = "Postal Object model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@ApiModel(description = "Customer Model")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class InlineResponse2003 {
-  @SerializedName("objectNumber")
-  private String objectNumber = null;
+  @SerializedName("tipoEvento")
+  private String tipoEvento = null;
 
-  @SerializedName("eventos")
-  private List<ObjectsEventos> eventos = new ArrayList<ObjectsEventos>();
+  @SerializedName("statusEvento")
+  private Integer statusEvento = null;
 
-  public InlineResponse2003 objectNumber(String objectNumber) {
-    this.objectNumber = objectNumber;
+  @SerializedName("descricaoEvento")
+  private String descricaoEvento = null;
+
+  public InlineResponse2003 tipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
     return this;
   }
 
    /**
    * 
-   * @return objectNumber
+   * @return tipoEvento
   **/
-  @ApiModelProperty(example = "PL177497655BR", value = "")
-  public String getObjectNumber() {
-    return objectNumber;
+  @ApiModelProperty(example = "BDE", value = "")
+  public String getTipoEvento() {
+    return tipoEvento;
   }
 
-  public void setObjectNumber(String objectNumber) {
-    this.objectNumber = objectNumber;
+  public void setTipoEvento(String tipoEvento) {
+    this.tipoEvento = tipoEvento;
   }
 
-  public InlineResponse2003 eventos(List<ObjectsEventos> eventos) {
-    this.eventos = eventos;
-    return this;
-  }
-
-  public InlineResponse2003 addEventosItem(ObjectsEventos eventosItem) {
-    this.eventos.add(eventosItem);
+  public InlineResponse2003 statusEvento(Integer statusEvento) {
+    this.statusEvento = statusEvento;
     return this;
   }
 
    /**
-   * Get eventos
-   * @return eventos
+   * 
+   * @return statusEvento
   **/
-  @ApiModelProperty(example = "null", value = "")
-  public List<ObjectsEventos> getEventos() {
-    return eventos;
+  @ApiModelProperty(example = "1", value = "")
+  public Integer getStatusEvento() {
+    return statusEvento;
   }
 
-  public void setEventos(List<ObjectsEventos> eventos) {
-    this.eventos = eventos;
+  public void setStatusEvento(Integer statusEvento) {
+    this.statusEvento = statusEvento;
+  }
+
+  public InlineResponse2003 descricaoEvento(String descricaoEvento) {
+    this.descricaoEvento = descricaoEvento;
+    return this;
+  }
+
+   /**
+   * 
+   * @return descricaoEvento
+  **/
+  @ApiModelProperty(example = "Entregue", value = "")
+  public String getDescricaoEvento() {
+    return descricaoEvento;
+  }
+
+  public void setDescricaoEvento(String descricaoEvento) {
+    this.descricaoEvento = descricaoEvento;
   }
 
 
@@ -84,13 +97,14 @@ public class InlineResponse2003 {
       return false;
     }
     InlineResponse2003 inlineResponse2003 = (InlineResponse2003) o;
-    return Objects.equals(this.objectNumber, inlineResponse2003.objectNumber) &&
-        Objects.equals(this.eventos, inlineResponse2003.eventos);
+    return Objects.equals(this.tipoEvento, inlineResponse2003.tipoEvento) &&
+        Objects.equals(this.statusEvento, inlineResponse2003.statusEvento) &&
+        Objects.equals(this.descricaoEvento, inlineResponse2003.descricaoEvento);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(objectNumber, eventos);
+    return Objects.hash(tipoEvento, statusEvento, descricaoEvento);
   }
 
 
@@ -99,8 +113,9 @@ public class InlineResponse2003 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2003 {\n");
     
-    sb.append("    objectNumber: ").append(toIndentedString(objectNumber)).append("\n");
-    sb.append("    eventos: ").append(toIndentedString(eventos)).append("\n");
+    sb.append("    tipoEvento: ").append(toIndentedString(tipoEvento)).append("\n");
+    sb.append("    statusEvento: ").append(toIndentedString(statusEvento)).append("\n");
+    sb.append("    descricaoEvento: ").append(toIndentedString(descricaoEvento)).append("\n");
     sb.append("}");
     return sb.toString();
   }

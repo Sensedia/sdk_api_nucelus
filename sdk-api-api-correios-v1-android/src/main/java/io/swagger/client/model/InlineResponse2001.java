@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -21,57 +21,57 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Customer Model")
 public class InlineResponse2001 {
   
-  @SerializedName("street")
-  private String street = null;
-  @SerializedName("neighborhood")
-  private String neighborhood = null;
-  @SerializedName("county")
-  private String county = null;
-  @SerializedName("state")
-  private String state = null;
+  @SerializedName("logradouro")
+  private String logradouro = null;
+  @SerializedName("bairro")
+  private String bairro = null;
+  @SerializedName("municipio")
+  private String municipio = null;
+  @SerializedName("uf")
+  private String uf = null;
 
   /**
-   * Street's name.
+   * Nome do logradouro
    **/
-  @ApiModelProperty(value = "Street's name.")
-  public String getStreet() {
-    return street;
+  @ApiModelProperty(value = "Nome do logradouro")
+  public String getLogradouro() {
+    return logradouro;
   }
-  public void setStreet(String street) {
-    this.street = street;
-  }
-
-  /**
-   * Neighborhood name.
-   **/
-  @ApiModelProperty(value = "Neighborhood name.")
-  public String getNeighborhood() {
-    return neighborhood;
-  }
-  public void setNeighborhood(String neighborhood) {
-    this.neighborhood = neighborhood;
+  public void setLogradouro(String logradouro) {
+    this.logradouro = logradouro;
   }
 
   /**
-   * County's name.
+   * Nome do Bairro
    **/
-  @ApiModelProperty(value = "County's name.")
-  public String getCounty() {
-    return county;
+  @ApiModelProperty(value = "Nome do Bairro")
+  public String getBairro() {
+    return bairro;
   }
-  public void setCounty(String county) {
-    this.county = county;
+  public void setBairro(String bairro) {
+    this.bairro = bairro;
   }
 
   /**
-   * State's abbreviation.
+   * Nome do municipio
    **/
-  @ApiModelProperty(value = "State's abbreviation.")
-  public String getState() {
-    return state;
+  @ApiModelProperty(value = "Nome do municipio")
+  public String getMunicipio() {
+    return municipio;
   }
-  public void setState(String state) {
-    this.state = state;
+  public void setMunicipio(String municipio) {
+    this.municipio = municipio;
+  }
+
+  /**
+   * Estado
+   **/
+  @ApiModelProperty(value = "Estado")
+  public String getUf() {
+    return uf;
+  }
+  public void setUf(String uf) {
+    this.uf = uf;
   }
 
 
@@ -84,19 +84,19 @@ public class InlineResponse2001 {
       return false;
     }
     InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
-    return (this.street == null ? inlineResponse2001.street == null : this.street.equals(inlineResponse2001.street)) &&
-        (this.neighborhood == null ? inlineResponse2001.neighborhood == null : this.neighborhood.equals(inlineResponse2001.neighborhood)) &&
-        (this.county == null ? inlineResponse2001.county == null : this.county.equals(inlineResponse2001.county)) &&
-        (this.state == null ? inlineResponse2001.state == null : this.state.equals(inlineResponse2001.state));
+    return (this.logradouro == null ? inlineResponse2001.logradouro == null : this.logradouro.equals(inlineResponse2001.logradouro)) &&
+        (this.bairro == null ? inlineResponse2001.bairro == null : this.bairro.equals(inlineResponse2001.bairro)) &&
+        (this.municipio == null ? inlineResponse2001.municipio == null : this.municipio.equals(inlineResponse2001.municipio)) &&
+        (this.uf == null ? inlineResponse2001.uf == null : this.uf.equals(inlineResponse2001.uf));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.street == null ? 0: this.street.hashCode());
-    result = 31 * result + (this.neighborhood == null ? 0: this.neighborhood.hashCode());
-    result = 31 * result + (this.county == null ? 0: this.county.hashCode());
-    result = 31 * result + (this.state == null ? 0: this.state.hashCode());
+    result = 31 * result + (this.logradouro == null ? 0: this.logradouro.hashCode());
+    result = 31 * result + (this.bairro == null ? 0: this.bairro.hashCode());
+    result = 31 * result + (this.municipio == null ? 0: this.municipio.hashCode());
+    result = 31 * result + (this.uf == null ? 0: this.uf.hashCode());
     return result;
   }
 
@@ -105,10 +105,10 @@ public class InlineResponse2001 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2001 {\n");
     
-    sb.append("  street: ").append(street).append("\n");
-    sb.append("  neighborhood: ").append(neighborhood).append("\n");
-    sb.append("  county: ").append(county).append("\n");
-    sb.append("  state: ").append(state).append("\n");
+    sb.append("  logradouro: ").append(logradouro).append("\n");
+    sb.append("  bairro: ").append(bairro).append("\n");
+    sb.append("  municipio: ").append(municipio).append("\n");
+    sb.append("  uf: ").append(uf).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

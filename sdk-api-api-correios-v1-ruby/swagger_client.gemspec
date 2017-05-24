@@ -3,7 +3,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.email       = [""]
   s.homepage    = "https://github.com/swagger-api/swagger-codegen"
   s.summary     = "API dos Correios Ruby Gem"
-  s.description = "Postal Object tracking API"
+  s.description = "API de rastreios de Objetos Postais"
   # TODO uncommnet and update below with a proper license 
   #s.license     = "Apache 2.0"
   s.required_ruby_version = ">= 1.9"

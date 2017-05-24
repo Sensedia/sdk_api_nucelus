@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -17,74 +17,61 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.client.model.ObjetosEventos;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Customer Model
+ * Postal Object model
  */
-@ApiModel(description = "Customer Model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@ApiModel(description = "Postal Object model")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class InlineResponse2002 {
-  @SerializedName("eventType")
-  private String eventType = null;
+  @SerializedName("numero")
+  private String numero = null;
 
-  @SerializedName("eventStatus")
-  private Integer eventStatus = null;
+  @SerializedName("eventos")
+  private List<ObjetosEventos> eventos = new ArrayList<ObjetosEventos>();
 
-  @SerializedName("eventDescription")
-  private String eventDescription = null;
-
-  public InlineResponse2002 eventType(String eventType) {
-    this.eventType = eventType;
+  public InlineResponse2002 numero(String numero) {
+    this.numero = numero;
     return this;
   }
 
    /**
    * 
-   * @return eventType
+   * @return numero
   **/
-  @ApiModelProperty(example = "BDE", value = "")
-  public String getEventType() {
-    return eventType;
+  @ApiModelProperty(example = "PL177497655BR", value = "")
+  public String getNumero() {
+    return numero;
   }
 
-  public void setEventType(String eventType) {
-    this.eventType = eventType;
+  public void setNumero(String numero) {
+    this.numero = numero;
   }
 
-  public InlineResponse2002 eventStatus(Integer eventStatus) {
-    this.eventStatus = eventStatus;
+  public InlineResponse2002 eventos(List<ObjetosEventos> eventos) {
+    this.eventos = eventos;
+    return this;
+  }
+
+  public InlineResponse2002 addEventosItem(ObjetosEventos eventosItem) {
+    this.eventos.add(eventosItem);
     return this;
   }
 
    /**
-   * 
-   * @return eventStatus
+   * Get eventos
+   * @return eventos
   **/
-  @ApiModelProperty(example = "1", value = "")
-  public Integer getEventStatus() {
-    return eventStatus;
+  @ApiModelProperty(example = "null", value = "")
+  public List<ObjetosEventos> getEventos() {
+    return eventos;
   }
 
-  public void setEventStatus(Integer eventStatus) {
-    this.eventStatus = eventStatus;
-  }
-
-  public InlineResponse2002 eventDescription(String eventDescription) {
-    this.eventDescription = eventDescription;
-    return this;
-  }
-
-   /**
-   * 
-   * @return eventDescription
-  **/
-  @ApiModelProperty(example = "Entregue", value = "")
-  public String getEventDescription() {
-    return eventDescription;
-  }
-
-  public void setEventDescription(String eventDescription) {
-    this.eventDescription = eventDescription;
+  public void setEventos(List<ObjetosEventos> eventos) {
+    this.eventos = eventos;
   }
 
 
@@ -97,14 +84,13 @@ public class InlineResponse2002 {
       return false;
     }
     InlineResponse2002 inlineResponse2002 = (InlineResponse2002) o;
-    return Objects.equals(this.eventType, inlineResponse2002.eventType) &&
-        Objects.equals(this.eventStatus, inlineResponse2002.eventStatus) &&
-        Objects.equals(this.eventDescription, inlineResponse2002.eventDescription);
+    return Objects.equals(this.numero, inlineResponse2002.numero) &&
+        Objects.equals(this.eventos, inlineResponse2002.eventos);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(eventType, eventStatus, eventDescription);
+    return Objects.hash(numero, eventos);
   }
 
 
@@ -113,9 +99,8 @@ public class InlineResponse2002 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2002 {\n");
     
-    sb.append("    eventType: ").append(toIndentedString(eventType)).append("\n");
-    sb.append("    eventStatus: ").append(toIndentedString(eventStatus)).append("\n");
-    sb.append("    eventDescription: ").append(toIndentedString(eventDescription)).append("\n");
+    sb.append("    numero: ").append(toIndentedString(numero)).append("\n");
+    sb.append("    eventos: ").append(toIndentedString(eventos)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -33,7 +33,7 @@ namespace Swagger\Client;
  * InlineResponse2002Test Class Doc Comment
  *
  * @category    Class */
-// * @description Customer Model
+// * @description Postal Object model
 /**
  * @package     Swagger\Client
  * @author      Swagger Codegen team
@@ -83,25 +83,17 @@ class InlineResponse2002Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "event_type"
+     * Test attribute "numero"
      */
-    public function testPropertyEventType()
+    public function testPropertyNumero()
     {
 
     }
 
     /**
-     * Test attribute "event_status"
+     * Test attribute "eventos"
      */
-    public function testPropertyEventStatus()
-    {
-
-    }
-
-    /**
-     * Test attribute "event_description"
-     */
-    public function testPropertyEventDescription()
+    public function testPropertyEventos()
     {
 
     }

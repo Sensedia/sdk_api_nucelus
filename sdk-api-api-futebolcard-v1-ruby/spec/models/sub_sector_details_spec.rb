@@ -31,7 +31,7 @@ describe 'SubSectorDetails' do
       expect(@instance).to be_instance_of(SwaggerClient::SubSectorDetails)
     end
   end
-  describe 'test attribute "id"' do
+  describe 'test attribute "subsector_id"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -43,7 +43,7 @@ describe 'SubSectorDetails' do
     end
   end
 
-  describe 'test attribute "has_ticket"' do
+  describe 'test attribute "has_tickets"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

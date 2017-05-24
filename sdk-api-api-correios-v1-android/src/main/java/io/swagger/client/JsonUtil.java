@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -57,20 +57,24 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("Address".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Address>>(){}.getType();
+    if ("DetalhesEventos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<DetalhesEventos>>(){}.getType();
     }
     
-    if ("Error".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Error>>(){}.getType();
+    if ("Endereco".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Endereco>>(){}.getType();
     }
     
-    if ("Events".equalsIgnoreCase(className)) {
-      return new TypeToken<List<Events>>(){}.getType();
+    if ("Erro".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Erro>>(){}.getType();
     }
     
-    if ("EventsDetails".equalsIgnoreCase(className)) {
-      return new TypeToken<List<EventsDetails>>(){}.getType();
+    if ("Eventos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<Eventos>>(){}.getType();
+    }
+    
+    if ("FaixaCEP".equalsIgnoreCase(className)) {
+      return new TypeToken<List<FaixaCEP>>(){}.getType();
     }
     
     if ("InlineResponse200".equalsIgnoreCase(className)) {
@@ -93,16 +97,12 @@ public class JsonUtil {
       return new TypeToken<List<InlineResponse400>>(){}.getType();
     }
     
-    if ("ObjectsEventos".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ObjectsEventos>>(){}.getType();
+    if ("ObjetoPostal".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ObjetoPostal>>(){}.getType();
     }
     
-    if ("PostalObjects".equalsIgnoreCase(className)) {
-      return new TypeToken<List<PostalObjects>>(){}.getType();
-    }
-    
-    if ("ZipcodeRange".equalsIgnoreCase(className)) {
-      return new TypeToken<List<ZipcodeRange>>(){}.getType();
+    if ("ObjetosEventos".equalsIgnoreCase(className)) {
+      return new TypeToken<List<ObjetosEventos>>(){}.getType();
     }
     
     return new TypeToken<List<Object>>(){}.getType();
@@ -111,20 +111,24 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("Address".equalsIgnoreCase(className)) {
-      return new TypeToken<Address>(){}.getType();
+    if ("DetalhesEventos".equalsIgnoreCase(className)) {
+      return new TypeToken<DetalhesEventos>(){}.getType();
     }
     
-    if ("Error".equalsIgnoreCase(className)) {
-      return new TypeToken<Error>(){}.getType();
+    if ("Endereco".equalsIgnoreCase(className)) {
+      return new TypeToken<Endereco>(){}.getType();
     }
     
-    if ("Events".equalsIgnoreCase(className)) {
-      return new TypeToken<Events>(){}.getType();
+    if ("Erro".equalsIgnoreCase(className)) {
+      return new TypeToken<Erro>(){}.getType();
     }
     
-    if ("EventsDetails".equalsIgnoreCase(className)) {
-      return new TypeToken<EventsDetails>(){}.getType();
+    if ("Eventos".equalsIgnoreCase(className)) {
+      return new TypeToken<Eventos>(){}.getType();
+    }
+    
+    if ("FaixaCEP".equalsIgnoreCase(className)) {
+      return new TypeToken<FaixaCEP>(){}.getType();
     }
     
     if ("InlineResponse200".equalsIgnoreCase(className)) {
@@ -147,16 +151,12 @@ public class JsonUtil {
       return new TypeToken<InlineResponse400>(){}.getType();
     }
     
-    if ("ObjectsEventos".equalsIgnoreCase(className)) {
-      return new TypeToken<ObjectsEventos>(){}.getType();
+    if ("ObjetoPostal".equalsIgnoreCase(className)) {
+      return new TypeToken<ObjetoPostal>(){}.getType();
     }
     
-    if ("PostalObjects".equalsIgnoreCase(className)) {
-      return new TypeToken<PostalObjects>(){}.getType();
-    }
-    
-    if ("ZipcodeRange".equalsIgnoreCase(className)) {
-      return new TypeToken<ZipcodeRange>(){}.getType();
+    if ("ObjetosEventos".equalsIgnoreCase(className)) {
+      return new TypeToken<ObjetosEventos>(){}.getType();
     }
     
     return new TypeToken<Object>(){}.getType();

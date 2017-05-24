@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -83,9 +83,9 @@ class InlineResponse400Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "result"
+     * Test attribute "resultado"
      */
-    public function testPropertyResult()
+    public function testPropertyResultado()
     {
 
     }
@@ -99,9 +99,9 @@ class InlineResponse400Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "details"
+     * Test attribute "detalhes"
      */
-    public function testPropertyDetails()
+    public function testPropertyDetalhes()
     {
 
     }

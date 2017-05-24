@@ -4,6 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **url** | **String** |  | [optional] 
-**coordinates** | [**Array&lt;InlineResponse2001Coordinates&gt;**](InlineResponse2001Coordinates.md) |  | [optional] 
+**coordinates** | [**Array&lt;InlineResponse2001MapCoordinates&gt;**](InlineResponse2001MapCoordinates.md) |  | [optional] 
 
 

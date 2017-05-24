@@ -1,7 +1,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -31,7 +31,7 @@ describe 'InlineResponse400' do
       expect(@instance).to be_instance_of(SwaggerClient::InlineResponse400)
     end
   end
-  describe 'test attribute "result"' do
+  describe 'test attribute "resultado"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -43,7 +43,7 @@ describe 'InlineResponse400' do
     end
   end
 
-  describe 'test attribute "details"' do
+  describe 'test attribute "detalhes"' do
     it 'should work' do
        # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

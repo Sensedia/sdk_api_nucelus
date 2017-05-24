@@ -18,21 +18,21 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "")
 public class InlineResponse2002Subsectors {
   
-  @SerializedName("id")
-  private String id = null;
+  @SerializedName("subsectorId")
+  private String subsectorId = null;
   @SerializedName("name")
   private String name = null;
-  @SerializedName("hasTicket")
-  private Integer hasTicket = null;
+  @SerializedName("hasTickets")
+  private Integer hasTickets = null;
 
   /**
    **/
   @ApiModelProperty(value = "")
-  public String getId() {
-    return id;
+  public String getSubsectorId() {
+    return subsectorId;
   }
-  public void setId(String id) {
-    this.id = id;
+  public void setSubsectorId(String subsectorId) {
+    this.subsectorId = subsectorId;
   }
 
   /**
@@ -48,11 +48,11 @@ public class InlineResponse2002Subsectors {
   /**
    **/
   @ApiModelProperty(value = "")
-  public Integer getHasTicket() {
-    return hasTicket;
+  public Integer getHasTickets() {
+    return hasTickets;
   }
-  public void setHasTicket(Integer hasTicket) {
-    this.hasTicket = hasTicket;
+  public void setHasTickets(Integer hasTickets) {
+    this.hasTickets = hasTickets;
   }
 
 
@@ -65,17 +65,17 @@ public class InlineResponse2002Subsectors {
       return false;
     }
     InlineResponse2002Subsectors inlineResponse2002Subsectors = (InlineResponse2002Subsectors) o;
-    return (this.id == null ? inlineResponse2002Subsectors.id == null : this.id.equals(inlineResponse2002Subsectors.id)) &&
+    return (this.subsectorId == null ? inlineResponse2002Subsectors.subsectorId == null : this.subsectorId.equals(inlineResponse2002Subsectors.subsectorId)) &&
         (this.name == null ? inlineResponse2002Subsectors.name == null : this.name.equals(inlineResponse2002Subsectors.name)) &&
-        (this.hasTicket == null ? inlineResponse2002Subsectors.hasTicket == null : this.hasTicket.equals(inlineResponse2002Subsectors.hasTicket));
+        (this.hasTickets == null ? inlineResponse2002Subsectors.hasTickets == null : this.hasTickets.equals(inlineResponse2002Subsectors.hasTickets));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.id == null ? 0: this.id.hashCode());
+    result = 31 * result + (this.subsectorId == null ? 0: this.subsectorId.hashCode());
     result = 31 * result + (this.name == null ? 0: this.name.hashCode());
-    result = 31 * result + (this.hasTicket == null ? 0: this.hasTicket.hashCode());
+    result = 31 * result + (this.hasTickets == null ? 0: this.hasTickets.hashCode());
     return result;
   }
 
@@ -84,9 +84,9 @@ public class InlineResponse2002Subsectors {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2002Subsectors {\n");
     
-    sb.append("  id: ").append(id).append("\n");
+    sb.append("  subsectorId: ").append(subsectorId).append("\n");
     sb.append("  name: ").append(name).append("\n");
-    sb.append("  hasTicket: ").append(hasTicket).append("\n");
+    sb.append("  hasTickets: ").append(hasTickets).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

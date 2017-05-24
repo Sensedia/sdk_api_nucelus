@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -54,9 +54,9 @@ class InlineResponse400 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'result' => 'string',
+        'resultado' => 'string',
         'status' => 'string',
-        'details' => 'string'
+        'detalhes' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -69,9 +69,9 @@ class InlineResponse400 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'result' => 'result',
+        'resultado' => 'resultado',
         'status' => 'status',
-        'details' => 'details'
+        'detalhes' => 'detalhes'
     ];
 
 
@@ -80,9 +80,9 @@ class InlineResponse400 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'result' => 'setResult',
+        'resultado' => 'setResultado',
         'status' => 'setStatus',
-        'details' => 'setDetails'
+        'detalhes' => 'setDetalhes'
     ];
 
 
@@ -91,9 +91,9 @@ class InlineResponse400 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'result' => 'getResult',
+        'resultado' => 'getResultado',
         'status' => 'getStatus',
-        'details' => 'getDetails'
+        'detalhes' => 'getDetalhes'
     ];
 
     public static function attributeMap()
@@ -127,9 +127,9 @@ class InlineResponse400 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['result'] = isset($data['result']) ? $data['result'] : null;
+        $this->container['resultado'] = isset($data['resultado']) ? $data['resultado'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['details'] = isset($data['details']) ? $data['details'] : null;
+        $this->container['detalhes'] = isset($data['detalhes']) ? $data['detalhes'] : null;
     }
 
     /**
@@ -158,22 +158,22 @@ class InlineResponse400 implements ArrayAccess
 
 
     /**
-     * Gets result
+     * Gets resultado
      * @return string
      */
-    public function getResult()
+    public function getResultado()
     {
-        return $this->container['result'];
+        return $this->container['resultado'];
     }
 
     /**
-     * Sets result
-     * @param string $result
+     * Sets resultado
+     * @param string $resultado
      * @return $this
      */
-    public function setResult($result)
+    public function setResultado($resultado)
     {
-        $this->container['result'] = $result;
+        $this->container['resultado'] = $resultado;
 
         return $this;
     }
@@ -200,22 +200,22 @@ class InlineResponse400 implements ArrayAccess
     }
 
     /**
-     * Gets details
+     * Gets detalhes
      * @return string
      */
-    public function getDetails()
+    public function getDetalhes()
     {
-        return $this->container['details'];
+        return $this->container['detalhes'];
     }
 
     /**
-     * Sets details
-     * @param string $details
+     * Sets detalhes
+     * @param string $detalhes
      * @return $this
      */
-    public function setDetails($details)
+    public function setDetalhes($detalhes)
     {
-        $this->container['details'] = $details;
+        $this->container['detalhes'] = $detalhes;
 
         return $this;
     }

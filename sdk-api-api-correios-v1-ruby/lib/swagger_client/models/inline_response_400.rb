@@ -1,7 +1,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -14,28 +14,28 @@ require 'date'
 module SwaggerClient
 
   class InlineResponse400
-    attr_accessor :result
+    attr_accessor :resultado
 
     attr_accessor :status
 
-    attr_accessor :details
+    attr_accessor :detalhes
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'result' => :'result',
+        :'resultado' => :'resultado',
         :'status' => :'status',
-        :'details' => :'details'
+        :'detalhes' => :'detalhes'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'result' => :'String',
+        :'resultado' => :'String',
         :'status' => :'String',
-        :'details' => :'String'
+        :'detalhes' => :'String'
       }
     end
 
@@ -47,16 +47,16 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'result')
-        self.result = attributes[:'result']
+      if attributes.has_key?(:'resultado')
+        self.resultado = attributes[:'resultado']
       end
 
       if attributes.has_key?(:'status')
         self.status = attributes[:'status']
       end
 
-      if attributes.has_key?(:'details')
-        self.details = attributes[:'details']
+      if attributes.has_key?(:'detalhes')
+        self.detalhes = attributes[:'detalhes']
       end
 
     end
@@ -79,9 +79,9 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          result == o.result &&
+          resultado == o.resultado &&
           status == o.status &&
-          details == o.details
+          detalhes == o.detalhes
     end
 
     # @see the `==` method
@@ -93,7 +93,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [result, status, details].hash
+      [resultado, status, detalhes].hash
     end
 
     # Builds the object from hash

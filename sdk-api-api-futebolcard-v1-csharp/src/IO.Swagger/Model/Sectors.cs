@@ -34,7 +34,7 @@ namespace IO.Swagger.Model
         /// </summary>
         /// <param name="Gates">Gates.</param>
         /// <param name="Map">Map.</param>
-        public Sectors(List<InlineResponse2001Gates> Gates = default(List<InlineResponse2001Gates>), List<InlineResponse2001Map> Map = default(List<InlineResponse2001Map>))
+        public Sectors(List<InlineResponse2001Gates> Gates = default(List<InlineResponse2001Gates>), InlineResponse2001Map Map = default(InlineResponse2001Map))
         {
             this.Gates = Gates;
             this.Map = Map;
@@ -49,7 +49,7 @@ namespace IO.Swagger.Model
         /// Gets or Sets Map
         /// </summary>
         [DataMember(Name="map", EmitDefaultValue=false)]
-        public List<InlineResponse2001Map> Map { get; set; }
+        public InlineResponse2001Map Map { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,7 +104,7 @@ namespace IO.Swagger.Model
                 (
                     this.Map == other.Map ||
                     this.Map != null &&
-                    this.Map.SequenceEqual(other.Map)
+                    this.Map.Equals(other.Map)
                 );
         }
 

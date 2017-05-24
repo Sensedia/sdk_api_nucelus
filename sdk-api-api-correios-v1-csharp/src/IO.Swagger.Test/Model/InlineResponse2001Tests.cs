@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -65,36 +65,36 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test the property 'Street'
+        /// Test the property 'Logradouro'
         /// </summary>
         [Test]
-        public void StreetTest()
+        public void LogradouroTest()
         {
-            // TODO unit test for the property 'Street'
+            // TODO unit test for the property 'Logradouro'
         }
         /// <summary>
-        /// Test the property 'Neighborhood'
+        /// Test the property 'Bairro'
         /// </summary>
         [Test]
-        public void NeighborhoodTest()
+        public void BairroTest()
         {
-            // TODO unit test for the property 'Neighborhood'
+            // TODO unit test for the property 'Bairro'
         }
         /// <summary>
-        /// Test the property 'County'
+        /// Test the property 'Municipio'
         /// </summary>
         [Test]
-        public void CountyTest()
+        public void MunicipioTest()
         {
-            // TODO unit test for the property 'County'
+            // TODO unit test for the property 'Municipio'
         }
         /// <summary>
-        /// Test the property 'State'
+        /// Test the property 'Uf'
         /// </summary>
         [Test]
-        public void StateTest()
+        public void UfTest()
         {
-            // TODO unit test for the property 'State'
+            // TODO unit test for the property 'Uf'
         }
 
     }

@@ -549,9 +549,9 @@ public class EventsApi {
    * @param accessToken Access token used in the authentication.
    * @param eventId Event to search.
    * @param sectorId Sector to search.
-   * @return List<InlineResponse2002>
+   * @return InlineResponse2002
   */
-  public List<InlineResponse2002> eventsEventIdSectorsSectorIdSubsectorsGet (String clientId, String accessToken, String eventId, String sectorId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public InlineResponse2002 eventsEventIdSectorsSectorIdSubsectorsGet (String clientId, String accessToken, String eventId, String sectorId) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
     // verify the required parameter 'clientId' is set
     if (clientId == null) {
@@ -603,7 +603,7 @@ public class EventsApi {
     try {
       String localVarResponse = apiInvoker.invokeAPI (basePath, path, "GET", queryParams, postBody, headerParams, formParams, contentType, authNames);
       if (localVarResponse != null) {
-         return (List<InlineResponse2002>) ApiInvoker.deserialize(localVarResponse, "array", InlineResponse2002.class);
+         return (InlineResponse2002) ApiInvoker.deserialize(localVarResponse, "", InlineResponse2002.class);
       } else {
          return null;
       }
@@ -629,7 +629,7 @@ public class EventsApi {
    * Returns a list of subcsectors for a given sector.
    * @param clientId Customer identifier used for authentication.   * @param accessToken Access token used in the authentication.   * @param eventId Event to search.   * @param sectorId Sector to search.
   */
-  public void eventsEventIdSectorsSectorIdSubsectorsGet (String clientId, String accessToken, String eventId, String sectorId, final Response.Listener<List<InlineResponse2002>> responseListener, final Response.ErrorListener errorListener) {
+  public void eventsEventIdSectorsSectorIdSubsectorsGet (String clientId, String accessToken, String eventId, String sectorId, final Response.Listener<InlineResponse2002> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
   
@@ -696,7 +696,7 @@ public class EventsApi {
           @Override
           public void onResponse(String localVarResponse) {
             try {
-              responseListener.onResponse((List<InlineResponse2002>) ApiInvoker.deserialize(localVarResponse,  "array", InlineResponse2002.class));
+              responseListener.onResponse((InlineResponse2002) ApiInvoker.deserialize(localVarResponse,  "", InlineResponse2002.class));
             } catch (ApiException exception) {
                errorListener.onErrorResponse(new VolleyError(exception));
             }

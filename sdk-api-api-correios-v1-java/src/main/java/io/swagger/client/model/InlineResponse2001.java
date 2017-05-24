@@ -1,6 +1,6 @@
 /*
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -22,90 +22,90 @@ import io.swagger.annotations.ApiModelProperty;
  * Customer Model
  */
 @ApiModel(description = "Customer Model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:11:14.521Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:34:21.157Z")
 public class InlineResponse2001 {
-  @SerializedName("street")
-  private String street = null;
+  @SerializedName("logradouro")
+  private String logradouro = null;
 
-  @SerializedName("neighborhood")
-  private String neighborhood = null;
+  @SerializedName("bairro")
+  private String bairro = null;
 
-  @SerializedName("county")
-  private String county = null;
+  @SerializedName("municipio")
+  private String municipio = null;
 
-  @SerializedName("state")
-  private String state = null;
+  @SerializedName("uf")
+  private String uf = null;
 
-  public InlineResponse2001 street(String street) {
-    this.street = street;
+  public InlineResponse2001 logradouro(String logradouro) {
+    this.logradouro = logradouro;
     return this;
   }
 
    /**
-   * Street's name.
-   * @return street
+   * Nome do logradouro
+   * @return logradouro
   **/
-  @ApiModelProperty(example = "Rua Doutor Ricardo Benetton Martins, s/n", value = "Street's name.")
-  public String getStreet() {
-    return street;
+  @ApiModelProperty(example = "Rua Doutor Ricardo Benetton Martins, s/n", value = "Nome do logradouro")
+  public String getLogradouro() {
+    return logradouro;
   }
 
-  public void setStreet(String street) {
-    this.street = street;
+  public void setLogradouro(String logradouro) {
+    this.logradouro = logradouro;
   }
 
-  public InlineResponse2001 neighborhood(String neighborhood) {
-    this.neighborhood = neighborhood;
+  public InlineResponse2001 bairro(String bairro) {
+    this.bairro = bairro;
     return this;
   }
 
    /**
-   * Neighborhood name.
-   * @return neighborhood
+   * Nome do Bairro
+   * @return bairro
   **/
-  @ApiModelProperty(example = "Polo II de Alta Tecnologia (Campinas)", value = "Neighborhood name.")
-  public String getNeighborhood() {
-    return neighborhood;
+  @ApiModelProperty(example = "Polo II de Alta Tecnologia (Campinas)", value = "Nome do Bairro")
+  public String getBairro() {
+    return bairro;
   }
 
-  public void setNeighborhood(String neighborhood) {
-    this.neighborhood = neighborhood;
+  public void setBairro(String bairro) {
+    this.bairro = bairro;
   }
 
-  public InlineResponse2001 county(String county) {
-    this.county = county;
+  public InlineResponse2001 municipio(String municipio) {
+    this.municipio = municipio;
     return this;
   }
 
    /**
-   * County's name.
-   * @return county
+   * Nome do municipio
+   * @return municipio
   **/
-  @ApiModelProperty(example = "Campinas", value = "County's name.")
-  public String getCounty() {
-    return county;
+  @ApiModelProperty(example = "Campinas", value = "Nome do municipio")
+  public String getMunicipio() {
+    return municipio;
   }
 
-  public void setCounty(String county) {
-    this.county = county;
+  public void setMunicipio(String municipio) {
+    this.municipio = municipio;
   }
 
-  public InlineResponse2001 state(String state) {
-    this.state = state;
+  public InlineResponse2001 uf(String uf) {
+    this.uf = uf;
     return this;
   }
 
    /**
-   * State's abbreviation.
-   * @return state
+   * Estado
+   * @return uf
   **/
-  @ApiModelProperty(example = "SP", value = "State's abbreviation.")
-  public String getState() {
-    return state;
+  @ApiModelProperty(example = "SP", value = "Estado")
+  public String getUf() {
+    return uf;
   }
 
-  public void setState(String state) {
-    this.state = state;
+  public void setUf(String uf) {
+    this.uf = uf;
   }
 
 
@@ -118,15 +118,15 @@ public class InlineResponse2001 {
       return false;
     }
     InlineResponse2001 inlineResponse2001 = (InlineResponse2001) o;
-    return Objects.equals(this.street, inlineResponse2001.street) &&
-        Objects.equals(this.neighborhood, inlineResponse2001.neighborhood) &&
-        Objects.equals(this.county, inlineResponse2001.county) &&
-        Objects.equals(this.state, inlineResponse2001.state);
+    return Objects.equals(this.logradouro, inlineResponse2001.logradouro) &&
+        Objects.equals(this.bairro, inlineResponse2001.bairro) &&
+        Objects.equals(this.municipio, inlineResponse2001.municipio) &&
+        Objects.equals(this.uf, inlineResponse2001.uf);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(street, neighborhood, county, state);
+    return Objects.hash(logradouro, bairro, municipio, uf);
   }
 
 
@@ -135,10 +135,10 @@ public class InlineResponse2001 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2001 {\n");
     
-    sb.append("    street: ").append(toIndentedString(street)).append("\n");
-    sb.append("    neighborhood: ").append(toIndentedString(neighborhood)).append("\n");
-    sb.append("    county: ").append(toIndentedString(county)).append("\n");
-    sb.append("    state: ").append(toIndentedString(state)).append("\n");
+    sb.append("    logradouro: ").append(toIndentedString(logradouro)).append("\n");
+    sb.append("    bairro: ").append(toIndentedString(bairro)).append("\n");
+    sb.append("    municipio: ").append(toIndentedString(municipio)).append("\n");
+    sb.append("    uf: ").append(toIndentedString(uf)).append("\n");
     sb.append("}");
     return sb.toString();
   }

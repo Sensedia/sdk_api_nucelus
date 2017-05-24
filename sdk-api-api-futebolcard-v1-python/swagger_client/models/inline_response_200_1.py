@@ -32,7 +32,7 @@ class InlineResponse2001(object):
         """
         self.swagger_types = {
             'gates': 'list[InlineResponse2001Gates]',
-            'map': 'list[InlineResponse2001Map]'
+            'map': 'InlineResponse2001Map'
         }
 
         self.attribute_map = {
@@ -70,7 +70,7 @@ class InlineResponse2001(object):
         Gets the map of this InlineResponse2001.
 
         :return: The map of this InlineResponse2001.
-        :rtype: list[InlineResponse2001Map]
+        :rtype: InlineResponse2001Map
         """
         return self._map
 
@@ -80,7 +80,7 @@ class InlineResponse2001(object):
         Sets the map of this InlineResponse2001.
 
         :param map: The map of this InlineResponse2001.
-        :type: list[InlineResponse2001Map]
+        :type: InlineResponse2001Map
         """
 
         self._map = map

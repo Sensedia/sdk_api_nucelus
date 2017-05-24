@@ -1,7 +1,7 @@
 =begin
 #API dos Correios
 
-#Postal Object tracking API
+#API de rastreios de Objetos Postais
 
 OpenAPI spec version: 1.0
 
@@ -14,36 +14,36 @@ require 'date'
 module SwaggerClient
   # Customer Model
   class InlineResponse2001
-    # Street's name.
-    attr_accessor :street
+    # Nome do logradouro
+    attr_accessor :logradouro
 
-    # Neighborhood name.
-    attr_accessor :neighborhood
+    # Nome do Bairro
+    attr_accessor :bairro
 
-    # County's name.
-    attr_accessor :county
+    # Nome do municipio
+    attr_accessor :municipio
 
-    # State's abbreviation.
-    attr_accessor :state
+    # Estado
+    attr_accessor :uf
 
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'street' => :'street',
-        :'neighborhood' => :'neighborhood',
-        :'county' => :'county',
-        :'state' => :'state'
+        :'logradouro' => :'logradouro',
+        :'bairro' => :'bairro',
+        :'municipio' => :'municipio',
+        :'uf' => :'uf'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'street' => :'String',
-        :'neighborhood' => :'String',
-        :'county' => :'String',
-        :'state' => :'String'
+        :'logradouro' => :'String',
+        :'bairro' => :'String',
+        :'municipio' => :'String',
+        :'uf' => :'String'
       }
     end
 
@@ -55,20 +55,20 @@ module SwaggerClient
       # convert string to symbol for hash key
       attributes = attributes.each_with_object({}){|(k,v), h| h[k.to_sym] = v}
 
-      if attributes.has_key?(:'street')
-        self.street = attributes[:'street']
+      if attributes.has_key?(:'logradouro')
+        self.logradouro = attributes[:'logradouro']
       end
 
-      if attributes.has_key?(:'neighborhood')
-        self.neighborhood = attributes[:'neighborhood']
+      if attributes.has_key?(:'bairro')
+        self.bairro = attributes[:'bairro']
       end
 
-      if attributes.has_key?(:'county')
-        self.county = attributes[:'county']
+      if attributes.has_key?(:'municipio')
+        self.municipio = attributes[:'municipio']
       end
 
-      if attributes.has_key?(:'state')
-        self.state = attributes[:'state']
+      if attributes.has_key?(:'uf')
+        self.uf = attributes[:'uf']
       end
 
     end
@@ -91,10 +91,10 @@ module SwaggerClient
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          street == o.street &&
-          neighborhood == o.neighborhood &&
-          county == o.county &&
-          state == o.state
+          logradouro == o.logradouro &&
+          bairro == o.bairro &&
+          municipio == o.municipio &&
+          uf == o.uf
     end
 
     # @see the `==` method
@@ -106,7 +106,7 @@ module SwaggerClient
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [street, neighborhood, county, state].hash
+      [logradouro, bairro, municipio, uf].hash
     end
 
     # Builds the object from hash

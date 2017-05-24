@@ -21,33 +21,33 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * InlineResponse2002Subsectors
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-22T17:08:03.639Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-05-24T12:46:22.524Z")
 public class InlineResponse2002Subsectors {
-  @SerializedName("id")
-  private String id = null;
+  @SerializedName("subsectorId")
+  private String subsectorId = null;
 
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("hasTicket")
-  private Integer hasTicket = null;
+  @SerializedName("hasTickets")
+  private Integer hasTickets = null;
 
-  public InlineResponse2002Subsectors id(String id) {
-    this.id = id;
+  public InlineResponse2002Subsectors subsectorId(String subsectorId) {
+    this.subsectorId = subsectorId;
     return this;
   }
 
    /**
-   * Get id
-   * @return id
+   * Get subsectorId
+   * @return subsectorId
   **/
   @ApiModelProperty(example = "831318", value = "")
-  public String getId() {
-    return id;
+  public String getSubsectorId() {
+    return subsectorId;
   }
 
-  public void setId(String id) {
-    this.id = id;
+  public void setSubsectorId(String subsectorId) {
+    this.subsectorId = subsectorId;
   }
 
   public InlineResponse2002Subsectors name(String name) {
@@ -68,22 +68,22 @@ public class InlineResponse2002Subsectors {
     this.name = name;
   }
 
-  public InlineResponse2002Subsectors hasTicket(Integer hasTicket) {
-    this.hasTicket = hasTicket;
+  public InlineResponse2002Subsectors hasTickets(Integer hasTickets) {
+    this.hasTickets = hasTickets;
     return this;
   }
 
    /**
-   * Get hasTicket
-   * @return hasTicket
+   * Get hasTickets
+   * @return hasTickets
   **/
   @ApiModelProperty(example = "1", value = "")
-  public Integer getHasTicket() {
-    return hasTicket;
+  public Integer getHasTickets() {
+    return hasTickets;
   }
 
-  public void setHasTicket(Integer hasTicket) {
-    this.hasTicket = hasTicket;
+  public void setHasTickets(Integer hasTickets) {
+    this.hasTickets = hasTickets;
   }
 
 
@@ -96,14 +96,14 @@ public class InlineResponse2002Subsectors {
       return false;
     }
     InlineResponse2002Subsectors inlineResponse2002Subsectors = (InlineResponse2002Subsectors) o;
-    return Objects.equals(this.id, inlineResponse2002Subsectors.id) &&
+    return Objects.equals(this.subsectorId, inlineResponse2002Subsectors.subsectorId) &&
         Objects.equals(this.name, inlineResponse2002Subsectors.name) &&
-        Objects.equals(this.hasTicket, inlineResponse2002Subsectors.hasTicket);
+        Objects.equals(this.hasTickets, inlineResponse2002Subsectors.hasTickets);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(id, name, hasTicket);
+    return Objects.hash(subsectorId, name, hasTickets);
   }
 
 
@@ -112,9 +112,9 @@ public class InlineResponse2002Subsectors {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse2002Subsectors {\n");
     
-    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    subsectorId: ").append(toIndentedString(subsectorId)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    hasTicket: ").append(toIndentedString(hasTicket)).append("\n");
+    sb.append("    hasTickets: ").append(toIndentedString(hasTickets)).append("\n");
     sb.append("}");
     return sb.toString();
   }

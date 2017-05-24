@@ -82,7 +82,7 @@ describe 'EventsApi' do
   # @param event_id Event to search.
   # @param sector_id Sector to search.
   # @param [Hash] opts the optional parameters
-  # @return [Array<InlineResponse2002>]
+  # @return [InlineResponse2002]
   describe 'events_event_id_sectors_sector_id_subsectors_get test' do
     it "should work" do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers

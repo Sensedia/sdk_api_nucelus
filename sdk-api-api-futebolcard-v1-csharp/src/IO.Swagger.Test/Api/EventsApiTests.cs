@@ -119,7 +119,7 @@ namespace IO.Swagger.Test
             //string eventId = null;
             //string sectorId = null;
             //var response = instance.EventsEventIdSectorsSectorIdSubsectorsGet(clientId, accessToken, eventId, sectorId);
-            //Assert.IsInstanceOf<List<InlineResponse2002>> (response, "response is List<InlineResponse2002>");
+            //Assert.IsInstanceOf<InlineResponse2002> (response, "response is InlineResponse2002");
         }
         
         /// <summary>

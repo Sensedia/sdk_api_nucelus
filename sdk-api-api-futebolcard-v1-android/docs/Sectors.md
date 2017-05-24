@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **gates** | [**List&lt;InlineResponse2001Gates&gt;**](InlineResponse2001Gates.md) |  |  [optional]
-**map** | [**List&lt;InlineResponse2001Map&gt;**](InlineResponse2001Map.md) |  |  [optional]
+**map** | [**InlineResponse2001Map**](InlineResponse2001Map.md) |  |  [optional]
 
 
 

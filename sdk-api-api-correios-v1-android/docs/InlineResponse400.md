@@ -4,9 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**result** | **String** |  |  [optional]
+**resultado** | **String** |  |  [optional]
 **status** | **String** |  |  [optional]
-**details** | **String** |  |  [optional]
+**detalhes** | **String** |  |  [optional]
 
 
 

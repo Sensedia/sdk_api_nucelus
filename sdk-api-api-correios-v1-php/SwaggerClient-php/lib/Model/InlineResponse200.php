@@ -13,7 +13,7 @@
 /**
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -55,9 +55,9 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'county' => 'string',
-        'start' => 'string',
-        'end' => 'string'
+        'nome' => 'string',
+        'inicio' => 'string',
+        'fim' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -70,9 +70,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'county' => 'county',
-        'start' => 'start',
-        'end' => 'end'
+        'nome' => 'nome',
+        'inicio' => 'inicio',
+        'fim' => 'fim'
     ];
 
 
@@ -81,9 +81,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'county' => 'setCounty',
-        'start' => 'setStart',
-        'end' => 'setEnd'
+        'nome' => 'setNome',
+        'inicio' => 'setInicio',
+        'fim' => 'setFim'
     ];
 
 
@@ -92,9 +92,9 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'county' => 'getCounty',
-        'start' => 'getStart',
-        'end' => 'getEnd'
+        'nome' => 'getNome',
+        'inicio' => 'getInicio',
+        'fim' => 'getFim'
     ];
 
     public static function attributeMap()
@@ -128,9 +128,9 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['county'] = isset($data['county']) ? $data['county'] : null;
-        $this->container['start'] = isset($data['start']) ? $data['start'] : null;
-        $this->container['end'] = isset($data['end']) ? $data['end'] : null;
+        $this->container['nome'] = isset($data['nome']) ? $data['nome'] : null;
+        $this->container['inicio'] = isset($data['inicio']) ? $data['inicio'] : null;
+        $this->container['fim'] = isset($data['fim']) ? $data['fim'] : null;
     }
 
     /**
@@ -159,64 +159,64 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets county
+     * Gets nome
      * @return string
      */
-    public function getCounty()
+    public function getNome()
     {
-        return $this->container['county'];
+        return $this->container['nome'];
     }
 
     /**
-     * Sets county
-     * @param string $county County's name
+     * Sets nome
+     * @param string $nome Nome do municipio
      * @return $this
      */
-    public function setCounty($county)
+    public function setNome($nome)
     {
-        $this->container['county'] = $county;
+        $this->container['nome'] = $nome;
 
         return $this;
     }
 
     /**
-     * Gets start
+     * Gets inicio
      * @return string
      */
-    public function getStart()
+    public function getInicio()
     {
-        return $this->container['start'];
+        return $this->container['inicio'];
     }
 
     /**
-     * Sets start
-     * @param string $start Zipcode range start
+     * Sets inicio
+     * @param string $inicio inicio da faixa de CEP
      * @return $this
      */
-    public function setStart($start)
+    public function setInicio($inicio)
     {
-        $this->container['start'] = $start;
+        $this->container['inicio'] = $inicio;
 
         return $this;
     }
 
     /**
-     * Gets end
+     * Gets fim
      * @return string
      */
-    public function getEnd()
+    public function getFim()
     {
-        return $this->container['end'];
+        return $this->container['fim'];
     }
 
     /**
-     * Sets end
-     * @param string $end Zipcode range end
+     * Sets fim
+     * @param string $fim Fim da faixa de CEP
      * @return $this
      */
-    public function setEnd($end)
+    public function setFim($fim)
     {
-        $this->container['end'] = $end;
+        $this->container['fim'] = $fim;
 
         return $this;
     }

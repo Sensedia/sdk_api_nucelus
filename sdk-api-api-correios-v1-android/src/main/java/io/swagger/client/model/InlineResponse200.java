@@ -1,6 +1,6 @@
 /**
  * API dos Correios
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -21,44 +21,44 @@ import com.google.gson.annotations.SerializedName;
 @ApiModel(description = "Customer Model")
 public class InlineResponse200 {
   
-  @SerializedName("county")
-  private String county = null;
-  @SerializedName("start")
-  private String start = null;
-  @SerializedName("end")
-  private String end = null;
+  @SerializedName("nome")
+  private String nome = null;
+  @SerializedName("inicio")
+  private String inicio = null;
+  @SerializedName("fim")
+  private String fim = null;
 
   /**
-   * County's name
+   * Nome do municipio
    **/
-  @ApiModelProperty(value = "County's name")
-  public String getCounty() {
-    return county;
+  @ApiModelProperty(value = "Nome do municipio")
+  public String getNome() {
+    return nome;
   }
-  public void setCounty(String county) {
-    this.county = county;
-  }
-
-  /**
-   * Zipcode range start
-   **/
-  @ApiModelProperty(value = "Zipcode range start")
-  public String getStart() {
-    return start;
-  }
-  public void setStart(String start) {
-    this.start = start;
+  public void setNome(String nome) {
+    this.nome = nome;
   }
 
   /**
-   * Zipcode range end
+   * inicio da faixa de CEP
    **/
-  @ApiModelProperty(value = "Zipcode range end")
-  public String getEnd() {
-    return end;
+  @ApiModelProperty(value = "inicio da faixa de CEP")
+  public String getInicio() {
+    return inicio;
   }
-  public void setEnd(String end) {
-    this.end = end;
+  public void setInicio(String inicio) {
+    this.inicio = inicio;
+  }
+
+  /**
+   * Fim da faixa de CEP
+   **/
+  @ApiModelProperty(value = "Fim da faixa de CEP")
+  public String getFim() {
+    return fim;
+  }
+  public void setFim(String fim) {
+    this.fim = fim;
   }
 
 
@@ -71,17 +71,17 @@ public class InlineResponse200 {
       return false;
     }
     InlineResponse200 inlineResponse200 = (InlineResponse200) o;
-    return (this.county == null ? inlineResponse200.county == null : this.county.equals(inlineResponse200.county)) &&
-        (this.start == null ? inlineResponse200.start == null : this.start.equals(inlineResponse200.start)) &&
-        (this.end == null ? inlineResponse200.end == null : this.end.equals(inlineResponse200.end));
+    return (this.nome == null ? inlineResponse200.nome == null : this.nome.equals(inlineResponse200.nome)) &&
+        (this.inicio == null ? inlineResponse200.inicio == null : this.inicio.equals(inlineResponse200.inicio)) &&
+        (this.fim == null ? inlineResponse200.fim == null : this.fim.equals(inlineResponse200.fim));
   }
 
   @Override
   public int hashCode() {
     int result = 17;
-    result = 31 * result + (this.county == null ? 0: this.county.hashCode());
-    result = 31 * result + (this.start == null ? 0: this.start.hashCode());
-    result = 31 * result + (this.end == null ? 0: this.end.hashCode());
+    result = 31 * result + (this.nome == null ? 0: this.nome.hashCode());
+    result = 31 * result + (this.inicio == null ? 0: this.inicio.hashCode());
+    result = 31 * result + (this.fim == null ? 0: this.fim.hashCode());
     return result;
   }
 
@@ -90,9 +90,9 @@ public class InlineResponse200 {
     StringBuilder sb = new StringBuilder();
     sb.append("class InlineResponse200 {\n");
     
-    sb.append("  county: ").append(county).append("\n");
-    sb.append("  start: ").append(start).append("\n");
-    sb.append("  end: ").append(end).append("\n");
+    sb.append("  nome: ").append(nome).append("\n");
+    sb.append("  inicio: ").append(inicio).append("\n");
+    sb.append("  fim: ").append(fim).append("\n");
     sb.append("}\n");
     return sb.toString();
   }

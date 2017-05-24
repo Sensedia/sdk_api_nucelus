@@ -31,7 +31,7 @@ module SwaggerClient
     def self.swagger_types
       {
         :'url' => :'String',
-        :'coordinates' => :'Array<InlineResponse2001Coordinates>'
+        :'coordinates' => :'Array<InlineResponse2001MapCoordinates>'
       }
     end
 

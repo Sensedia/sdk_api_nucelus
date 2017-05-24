@@ -32,31 +32,31 @@ namespace IO.Swagger.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InlineResponse2002Subsectors" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
+        /// <param name="SubsectorId">SubsectorId.</param>
         /// <param name="Name">Name.</param>
-        /// <param name="HasTicket">HasTicket.</param>
-        public InlineResponse2002Subsectors(string Id = default(string), string Name = default(string), int? HasTicket = default(int?))
+        /// <param name="HasTickets">HasTickets.</param>
+        public InlineResponse2002Subsectors(string SubsectorId = default(string), string Name = default(string), int? HasTickets = default(int?))
         {
-            this.Id = Id;
+            this.SubsectorId = SubsectorId;
             this.Name = Name;
-            this.HasTicket = HasTicket;
+            this.HasTickets = HasTickets;
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets SubsectorId
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        [DataMember(Name="subsectorId", EmitDefaultValue=false)]
+        public string SubsectorId { get; set; }
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
-        /// Gets or Sets HasTicket
+        /// Gets or Sets HasTickets
         /// </summary>
-        [DataMember(Name="hasTicket", EmitDefaultValue=false)]
-        public int? HasTicket { get; set; }
+        [DataMember(Name="hasTickets", EmitDefaultValue=false)]
+        public int? HasTickets { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,9 +65,9 @@ namespace IO.Swagger.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InlineResponse2002Subsectors {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SubsectorId: ").Append(SubsectorId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  HasTicket: ").Append(HasTicket).Append("\n");
+            sb.Append("  HasTickets: ").Append(HasTickets).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -105,9 +105,9 @@ namespace IO.Swagger.Model
 
             return 
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.SubsectorId == other.SubsectorId ||
+                    this.SubsectorId != null &&
+                    this.SubsectorId.Equals(other.SubsectorId)
                 ) && 
                 (
                     this.Name == other.Name ||
@@ -115,9 +115,9 @@ namespace IO.Swagger.Model
                     this.Name.Equals(other.Name)
                 ) && 
                 (
-                    this.HasTicket == other.HasTicket ||
-                    this.HasTicket != null &&
-                    this.HasTicket.Equals(other.HasTicket)
+                    this.HasTickets == other.HasTickets ||
+                    this.HasTickets != null &&
+                    this.HasTickets.Equals(other.HasTickets)
                 );
         }
 
@@ -132,12 +132,12 @@ namespace IO.Swagger.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.SubsectorId != null)
+                    hash = hash * 59 + this.SubsectorId.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                if (this.HasTicket != null)
-                    hash = hash * 59 + this.HasTicket.GetHashCode();
+                if (this.HasTickets != null)
+                    hash = hash * 59 + this.HasTickets.GetHashCode();
                 return hash;
             }
         }

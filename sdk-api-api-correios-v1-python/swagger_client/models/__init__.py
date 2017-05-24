@@ -3,7 +3,7 @@
 """
     API dos Correios
 
-    Postal Object tracking API
+    API de rastreios de Objetos Postais
 
     OpenAPI spec version: 1.0
     
@@ -14,15 +14,15 @@
 from __future__ import absolute_import
 
 # import models into model package
-from .address import Address
-from .error import Error
-from .events import Events
-from .events_details import EventsDetails
+from .detalhes_eventos import DetalhesEventos
+from .endereco import Endereco
+from .erro import Erro
+from .eventos import Eventos
+from .faixa_cep import FaixaCEP
 from .inline_response_200 import InlineResponse200
 from .inline_response_200_1 import InlineResponse2001
 from .inline_response_200_2 import InlineResponse2002
 from .inline_response_200_3 import InlineResponse2003
 from .inline_response_400 import InlineResponse400
-from .objects_eventos import ObjectsEventos
-from .postal_objects import PostalObjects
-from .zipcode_range import ZipcodeRange
+from .objeto_postal import ObjetoPostal
+from .objetos_eventos import ObjetosEventos

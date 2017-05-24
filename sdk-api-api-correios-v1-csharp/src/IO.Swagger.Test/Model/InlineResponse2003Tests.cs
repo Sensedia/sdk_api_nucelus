@@ -1,7 +1,7 @@
 /* 
  * API dos Correios
  *
- * Postal Object tracking API
+ * API de rastreios de Objetos Postais
  *
  * OpenAPI spec version: 1.0
  * 
@@ -65,20 +65,28 @@ namespace IO.Swagger.Test
         }
 
         /// <summary>
-        /// Test the property 'ObjectNumber'
+        /// Test the property 'TipoEvento'
         /// </summary>
         [Test]
-        public void ObjectNumberTest()
+        public void TipoEventoTest()
         {
-            // TODO unit test for the property 'ObjectNumber'
+            // TODO unit test for the property 'TipoEvento'
         }
         /// <summary>
-        /// Test the property 'Eventos'
+        /// Test the property 'StatusEvento'
         /// </summary>
         [Test]
-        public void EventosTest()
+        public void StatusEventoTest()
         {
-            // TODO unit test for the property 'Eventos'
+            // TODO unit test for the property 'StatusEvento'
+        }
+        /// <summary>
+        /// Test the property 'DescricaoEvento'
+        /// </summary>
+        [Test]
+        public void DescricaoEventoTest()
+        {
+            // TODO unit test for the property 'DescricaoEvento'
         }
 
     }

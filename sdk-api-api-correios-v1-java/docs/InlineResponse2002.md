@@ -4,9 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**eventType** | **String** |  |  [optional]
-**eventStatus** | **Integer** |  |  [optional]
-**eventDescription** | **String** |  |  [optional]
+**numero** | **String** |  |  [optional]
+**eventos** | [**List&lt;ObjetosEventos&gt;**](ObjetosEventos.md) |  |  [optional]
 
 
 
